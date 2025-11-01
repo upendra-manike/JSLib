@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/api-chain",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Declarative API chaining - Create API workflows with ease",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

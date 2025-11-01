@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/smart-date",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Human-friendly date library - Converts timestamps into natural language",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
