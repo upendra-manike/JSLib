@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Date Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+            width: 1200px;
+            height: 628px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            padding: 60px;
+        }
+        
+        .icon {
+            font-size: 120px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing: -2px;
+        }
+        
+        .subtitle {
+            font-size: 32px;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .package {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 24px;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .decorative {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            top: -200px;
+            right: -200px;
+            z-index: 1;
+        }
+        
+        .decorative-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            bottom: -150px;
+            left: -150px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative"></div>
+    <div class="decorative-2"></div>
+    <div class="container">
+        <div class="icon">📅</div>
+        <h1>Making Dates Human Again</h1>
+        <div class="subtitle">Natural Language for Modern Apps</div>
+        <div class="package">@upendra.manike/smart-date</div>
+    </div>
+</body>
+</html>
+

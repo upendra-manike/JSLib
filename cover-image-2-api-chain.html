@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Chain Cover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+            width: 1200px;
+            height: 628px;
+            background: linear-gradient(135deg, #0a66c2 0%, #0077b5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            padding: 60px;
+        }
+        
+        .icon {
+            font-size: 120px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing: -2px;
+        }
+        
+        .subtitle {
+            font-size: 32px;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .package {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 24px;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .chain-visual {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.1;
+        }
+        
+        .link {
+            width: 80px;
+            height: 8px;
+            background: white;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .node {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="chain-visual">
+        <div class="node"></div>
+        <div class="link"></div>
+        <div class="node"></div>
+        <div class="link"></div>
+        <div class="node"></div>
+    </div>
+    <div class="container">
+        <div class="icon">🔗</div>
+        <h1>Clean API Workflows</h1>
+        <div class="subtitle">From Callback Hell to Declarative Chains</div>
+        <div class="package">@upendra.manike/api-chain</div>
+    </div>
+</body>
+</html>
+
