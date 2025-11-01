@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Newsletter Thumbnails (300x300)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f3f2ef;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .thumbnail-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .thumbnail-preview {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .thumbnail-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .thumbnail-2 {
+            background: linear-gradient(135deg, #0a66c2 0%, #0077b5 100%);
+        }
+        .thumbnail-3 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .thumbnail-4 {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        .thumbnail-5 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .thumbnail-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .thumbnail-icon {
+            font-size: 80px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        
+        .thumbnail-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        
+        .thumbnail-name {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin-top: 10px;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 4px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .thumbnail-info {
+            text-align: center;
+        }
+        
+        .thumbnail-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+        
+        .thumbnail-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .download-btn {
+            background: #0a66c2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        
+        .download-btn:hover {
+            background: #004182;
+        }
+        
+        .instructions {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .instructions h2 {
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Generate Newsletter Thumbnails (300x300px)</h1>
+        
+        <div class="instructions">
+            <h2>How to Capture Thumbnails:</h2>
+            <ol>
+                <li>Click the "Capture" button for each thumbnail</li>
+                <li>The preview will be shown below</li>
+                <li>Right-click the preview → "Save Image As"</li>
+                <li>Save as PNG with the suggested filename</li>
+                <li>Or use browser DevTools: Right-click → Inspect → Screenshot element</li>
+            </ol>
+        </div>
+        
+        <div class="grid">
+            <!-- Thumbnail 1: Smart Date -->
+            <div class="thumbnail-card">
+                <div class="thumbnail-preview thumbnail-1">
+                    <div class="thumbnail-content">
+                        <div class="thumbnail-icon">📅</div>
+                        <div class="thumbnail-title">Making Dates<br>Human Again</div>
+                        <div class="thumbnail-name">@upendra.manike/smart-date</div>
+                    </div>
+                </div>
+                <div class="thumbnail-info">
+                    <h3>Smart Date</h3>
+                    <p>300 x 300 pixels</p>
+                    <button class="download-btn" onclick="captureThumbnail(1, 'smart-date-thumbnail-300x300.png')">
+                        Capture Thumbnail
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Thumbnail 2: API Chain -->
+            <div class="thumbnail-card">
+                <div class="thumbnail-preview thumbnail-2">
+                    <div class="thumbnail-content">
+                        <div class="thumbnail-icon">🔗</div>
+                        <div class="thumbnail-title">Clean API<br>Workflows</div>
+                        <div class="thumbnail-name">@upendra.manike/api-chain</div>
+                    </div>
+                </div>
+                <div class="thumbnail-info">
+                    <h3>API Chain</h3>
+                    <p>300 x 300 pixels</p>
+                    <button class="download-btn" onclick="captureThumbnail(2, 'api-chain-thumbnail-300x300.png')">
+                        Capture Thumbnail
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Thumbnail 3: Tiny Utils -->
+            <div class="thumbnail-card">
+                <div class="thumbnail-preview thumbnail-3">
+                    <div class="thumbnail-content">
+                        <div class="thumbnail-icon">🪄</div>
+                        <div class="thumbnail-title">Beyond<br>Lodash</div>
+                        <div class="thumbnail-name">@upendra.manike/tiny-utils</div>
+                    </div>
+                </div>
+                <div class="thumbnail-info">
+                    <h3>Tiny Utils</h3>
+                    <p>300 x 300 pixels</p>
+                    <button class="download-btn" onclick="captureThumbnail(3, 'tiny-utils-thumbnail-300x300.png')">
+                        Capture Thumbnail
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Thumbnail 4: Lite Fetcher -->
+            <div class="thumbnail-card">
+                <div class="thumbnail-preview thumbnail-4">
+                    <div class="thumbnail-content">
+                        <div class="thumbnail-icon">⚡</div>
+                        <div class="thumbnail-title">Smart<br>Caching</div>
+                        <div class="thumbnail-name">@upendra.manike/lite-fetcher</div>
+                    </div>
+                </div>
+                <div class="thumbnail-info">
+                    <h3>Lite Fetcher</h3>
+                    <p>300 x 300 pixels</p>
+                    <button class="download-btn" onclick="captureThumbnail(4, 'lite-fetcher-thumbnail-300x300.png')">
+                        Capture Thumbnail
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Thumbnail 5: React Motion Kit -->
+            <div class="thumbnail-card">
+                <div class="thumbnail-preview thumbnail-5">
+                    <div class="thumbnail-content">
+                        <div class="thumbnail-icon">🎭</div>
+                        <div class="thumbnail-title">Animations<br>That Don't Hurt</div>
+                        <div class="thumbnail-name">@upendra.manike/react-motion-kit</div>
+                    </div>
+                </div>
+                <div class="thumbnail-info">
+                    <h3>React Motion Kit</h3>
+                    <p>300 x 300 pixels</p>
+                    <button class="download-btn" onclick="captureThumbnail(5, 'react-motion-kit-thumbnail-300x300.png')">
+                        Capture Thumbnail
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function captureThumbnail(index, filename) {
+            const preview = document.querySelectorAll('.thumbnail-preview')[index - 1];
+            
+            // Use html2canvas library if available, otherwise show instructions
+            if (typeof html2canvas !== 'undefined') {
+                html2canvas(preview, {
+                    width: 300,
+                    height: 300,
+                    scale: 2
+                }).then(canvas => {
+                    canvas.toBlob(blob => {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = filename;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    });
+                });
+            } else {
+                // Instructions for manual capture
+                alert(`To capture this thumbnail:\n\n1. Right-click on the thumbnail above\n2. Select "Inspect Element"\n3. In DevTools, right-click the element\n4. Select "Capture node screenshot"\n5. Save as: ${filename}\n\nOr use a screenshot tool to capture just the square thumbnail.`);
+            }
+        }
+    </script>
+</body>
+</html>
+

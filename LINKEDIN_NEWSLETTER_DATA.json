@@ -1,0 +1,79 @@
+{
+  "newsletters": [
+    {
+      "id": 1,
+      "package": "@upendra.manike/smart-date",
+      "newsletterTitle": "Modern JavaScript Libraries: Making Dates Human Again",
+      "publishingFrequency": "Weekly",
+      "newsletterDescription": "Explore modern JavaScript and TypeScript libraries that solve real developer problems. In this newsletter, we dive deep into human-friendly date formatting, natural language processing for timestamps, and building better user experiences with @upendra.manike/smart-date. Perfect for developers building social apps, dashboards, and user-friendly interfaces.",
+      "coverImage": "linkedin-cover-1-smart-date.png",
+      "thumbnailImage": "smart-date-thumbnail-300x300.png",
+      "coverImageHTML": "cover-image-1-smart-date.html",
+      "firstArticleContent": "LINKEDIN_NEWSLETTER_1_SMART_DATE.txt",
+      "keywords": ["JavaScript", "TypeScript", "Date Formatting", "UX Design", "Web Development"],
+      "targetAudience": "Frontend developers, UX designers, Full-stack developers"
+    },
+    {
+      "id": 2,
+      "package": "@upendra.manike/api-chain",
+      "newsletterTitle": "Clean Code Series: Declarative API Workflows",
+      "publishingFrequency": "Weekly",
+      "newsletterDescription": "Discover how to eliminate callback hell and build clean, maintainable API workflows. This newsletter covers @upendra.manike/api-chain - a library that makes sequential API calls declarative and easy to manage. Learn patterns for dashboard loading, multi-step forms, and complex data pipelines. Transform your async code from messy chains to beautiful declarative workflows.",
+      "coverImage": "linkedin-cover-2-api-chain.png",
+      "thumbnailImage": "api-chain-thumbnail-300x300.png",
+      "coverImageHTML": "cover-image-2-api-chain.html",
+      "firstArticleContent": "LINKEDIN_NEWSLETTER_2_API_CHAIN.txt",
+      "keywords": ["JavaScript", "TypeScript", "API Development", "Async Programming", "Code Quality"],
+      "targetAudience": "Backend developers, Full-stack developers, Software architects"
+    },
+    {
+      "id": 3,
+      "package": "@upendra.manike/tiny-utils",
+      "newsletterTitle": "Performance First: Modern Utility Libraries",
+      "publishingFrequency": "Weekly",
+      "newsletterDescription": "Bundle size matters, especially on mobile. This newsletter explores @upendra.manike/tiny-utils - a modern, tree-shakable alternative to Lodash. Learn how to reduce bundle sizes by 50-70% while maintaining functionality. Perfect for performance-conscious developers building modern web applications. Discover modern ES6+ patterns that replace heavy dependencies.",
+      "coverImage": "linkedin-cover-3-tiny-utils.png",
+      "thumbnailImage": "tiny-utils-thumbnail-300x300.png",
+      "coverImageHTML": "cover-image-3-tiny-utils.html",
+      "firstArticleContent": "LINKEDIN_NEWSLETTER_3_TINY_UTILS.txt",
+      "keywords": ["JavaScript", "Performance", "Bundle Size", "Tree Shaking", "Optimization"],
+      "targetAudience": "Frontend developers, Performance engineers, Mobile developers"
+    },
+    {
+      "id": 4,
+      "package": "@upendra.manike/lite-fetcher",
+      "newsletterTitle": "Smart Caching Strategies for Web Apps",
+      "publishingFrequency": "Weekly",
+      "newsletterDescription": "Caching shouldn't be complicated. This newsletter dives into @upendra.manike/lite-fetcher - a lightweight API client with built-in caching. Learn how to reduce API load, improve performance, and build offline-first applications. Perfect for developers building data-intensive applications. Master caching strategies that make your apps faster and more efficient.",
+      "coverImage": "linkedin-cover-4-lite-fetcher.png",
+      "thumbnailImage": "lite-fetcher-thumbnail-300x300.png",
+      "coverImageHTML": "cover-image-4-lite-fetcher.html",
+      "firstArticleContent": "LINKEDIN_NEWSLETTER_4_LITE_FETCHER.txt",
+      "keywords": ["JavaScript", "API", "Caching", "Performance", "Offline Apps"],
+      "targetAudience": "Full-stack developers, API developers, Performance engineers"
+    },
+    {
+      "id": 5,
+      "package": "@upendra.manike/react-motion-kit",
+      "newsletterTitle": "Beautiful UIs: Prebuilt React Animations",
+      "publishingFrequency": "Weekly",
+      "newsletterDescription": "Animations can make or break user experience. This newsletter covers @upendra.manike/react-motion-kit - prebuilt animation hooks for React. Stop writing the same animation code and start building beautiful, performant UIs with production-ready hooks built on Framer Motion. Learn animation best practices, performance optimization, and accessibility considerations.",
+      "coverImage": "linkedin-cover-5-react-motion-kit.png",
+      "thumbnailImage": "react-motion-kit-thumbnail-300x300.png",
+      "coverImageHTML": "cover-image-5-react-motion-kit.html",
+      "firstArticleContent": "LINKEDIN_NEWSLETTER_5_REACT_MOTION_KIT.txt",
+      "keywords": ["React", "JavaScript", "Animation", "UX Design", "Frontend Development"],
+      "targetAudience": "React developers, Frontend developers, UI/UX designers"
+    }
+  ],
+  "commonSettings": {
+    "publishingFrequency": "Weekly",
+    "imageSize": {
+      "coverImage": "1200 x 628 pixels",
+      "thumbnail": "300 x 300 pixels"
+    },
+    "subscriptionNote": "Your connections and followers will be invited to subscribe automatically",
+    "maxNewsletters": 5
+  }
+}
+
