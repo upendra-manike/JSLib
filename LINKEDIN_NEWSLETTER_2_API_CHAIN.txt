@@ -1,0 +1,167 @@
+🔗 Clean API Workflows: From Callback Hell to Declarative Chains
+
+If you've built complex web applications, you know the pain of sequential API calls. Getting user data, then their posts, then comments on those posts - it quickly becomes a mess of nested callbacks, promise chains, or try-catch blocks.
+
+Today, I want to share how I solved this problem with @upendra.manike/api-chain - a library that makes API workflows declarative, readable, and maintainable.
+
+🧩 The Problem
+
+Modern applications rarely work with single API endpoints. Consider a typical dashboard:
+
+1. Fetch user profile
+2. Get user's posts (needs user ID from step 1)
+3. Get comments on first post (needs post ID from step 2)
+4. Get notifications (needs user ID from step 1)
+5. Combine everything for display
+
+The traditional approach? Nested promises or async/await chains that become hard to read and debug:
+
+```javascript
+// The old way - messy and hard to maintain
+async function loadDashboard() {
+  try {
+    const user = await getUser();
+    const posts = await getPosts(user.id);
+    const comments = await getComments(posts[0].id);
+    const notifications = await getNotifications(user.id);
+    return { user, posts, comments, notifications };
+  } catch (error) {
+    // Error handling scattered everywhere
+    console.error(error);
+    throw error;
+  }
+}
+```
+
+This gets worse with error handling, progress tracking, and retry logic.
+
+✨ The Solution: Declarative Chains
+
+API Chain introduces a declarative way to build API workflows. Instead of nested async calls, you define your workflow as a sequence:
+
+```typescript
+import { ApiChain } from '@upendra.manike/api-chain';
+
+const chain = new ApiChain({
+  onError: async (error, step) => {
+    console.error(`Error at step ${step}:`, error);
+    // Send to error tracking service
+  },
+  onStepComplete: async (result, step) => {
+    console.log(`Step ${step} completed`);
+    // Update progress bar
+  }
+});
+
+const result = await chain
+  .step(async () => await getUser())
+  .step(async (user) => await getPosts(user.id))
+  .step(async (posts) => await getComments(posts[0].id))
+  .step(async (comments) => {
+    const user = await getUser(); // Can access previous results
+    const notifications = await getNotifications(user.id);
+    return { comments, notifications };
+  })
+  .run();
+```
+
+🎯 Key Features
+
+1. **Automatic Result Passing**
+Each step receives the result from the previous step as its input. No need to manually pass data through the chain.
+
+2. **Error Handling Hooks**
+Define error handlers that run when any step fails. Perfect for logging, user notifications, or cleanup.
+
+3. **Progress Tracking**
+Get notified when each step completes. Build progress bars, update UI, or log progress.
+
+4. **Continue on Error**
+Sometimes you want to continue even if a step fails. API Chain lets you configure this behavior.
+
+5. **Type Safety**
+Full TypeScript support means you get autocomplete and type checking throughout your chains.
+
+💡 Real-World Use Cases
+
+**Dashboard Data Loading:**
+```typescript
+const dashboardData = await chain
+  .step(() => fetchUser(userId))
+  .step(user => fetchUserPosts(user.id))
+  .step(user => fetchUserNotifications(user.id))
+  .step(user => fetchUserSettings(user.id))
+  .run();
+```
+
+**Multi-Step Form Submission:**
+```typescript
+const submission = await chain
+  .step(() => validateForm(formData))
+  .step(() => uploadFiles(formData.files))
+  .step(files => createSubmission({ ...formData, files }))
+  .step(submission => sendConfirmationEmail(submission.id))
+  .run();
+```
+
+**Data Pipeline:**
+```typescript
+const processed = await chain
+  .step(() => fetchRawData())
+  .step(data => transformData(data))
+  .step(data => validateData(data))
+  .step(data => saveToDatabase(data))
+  .run();
+```
+
+🔍 Why This Approach Works
+
+1. **Readability**: The workflow is explicit and linear
+2. **Debuggability**: Easy to see where something fails
+3. **Testability**: Each step can be tested independently
+4. **Maintainability**: Changes to the workflow are localized
+5. **Composability**: Chains can be combined and reused
+
+📦 Getting Started
+
+```bash
+npm install @upendra.manike/api-chain
+```
+
+```typescript
+import { ApiChain } from '@upendra.manike/api-chain';
+
+// Simple chain
+const chain = new ApiChain();
+const result = await chain
+  .step(async () => 'Hello')
+  .step(async (prev) => `${prev} World`)
+  .run();
+
+console.log(result.data); // "Hello World"
+```
+
+The library is lightweight, has zero dependencies, and works with any async function - not just API calls!
+
+🚀 Advanced Usage
+
+You can also use the helper function for one-off chains:
+
+```typescript
+import { chain } from '@upendra.manike/api-chain';
+
+const data = await chain(
+  async () => getUser(),
+  async (user) => getPosts(user.id),
+  async (posts) => getComments(posts[0].id)
+).run();
+```
+
+🔗 Check it out: https://www.npmjs.com/package/@upendra.manike/api-chain
+
+Open source (MIT). I'd love to see what workflows you build with it!
+
+What's the most complex API workflow you've had to handle? Share your experience in the comments! 💬
+
+#WebDevelopment #JavaScript #TypeScript #APIDevelopment #BackendDevelopment #NPM #OpenSource #SoftwareArchitecture #CodeQuality
+
