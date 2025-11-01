@@ -68,20 +68,24 @@ export function isPlainObject(value: any): value is Record<string, any> {
  * Detect if running in browser
  */
 export function isBrowser(): boolean {
-  return typeof window !== 'undefined' && typeof document !== 'undefined';
+  if (typeof globalThis === 'undefined') return false;
+  const win = globalThis as any;
+  return typeof win.window !== 'undefined' && typeof win.document !== 'undefined';
 }
 
 /**
  * Detect if running in Node.js
  */
 export function isNode(): boolean {
-  return typeof process !== 'undefined' && process.versions != null && process.versions.node != null;
+  return typeof globalThis !== 'undefined' && typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.versions != null && (globalThis as any).process.versions.node != null;
 }
 
 /**
  * Detect if running in Web Worker
  */
 export function isWebWorker(): boolean {
-  return typeof importScripts !== 'undefined' || (typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope);
+  if (typeof globalThis === 'undefined') return false;
+  const win = globalThis as any;
+  return typeof win.importScripts !== 'undefined' || (typeof win.WorkerGlobalScope !== 'undefined' && win.self instanceof win.WorkerGlobalScope);
 }
 
