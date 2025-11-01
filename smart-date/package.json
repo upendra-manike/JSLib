@@ -24,12 +24,22 @@
     "type-check": "tsc --noEmit"
   },
   "keywords": [
+    "ai-agent",
+    "ai-friendly",
+    "ai-integration",
+    "autonomous-agent",
+    "chatgpt",
+    "claude",
+    "code-generation",
+    "copilot",
     "date",
-    "time",
+    "format",
     "human-readable",
-    "relative-time",
+    "llm",
     "natural-language",
-    "format"
+    "openai",
+    "relative-time",
+    "time"
   ],
   "author": "Upendra Manike <upendra.manike@gmail.com>",
   "license": "MIT",

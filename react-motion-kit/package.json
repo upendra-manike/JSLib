@@ -24,11 +24,21 @@
     "type-check": "tsc --noEmit"
   },
   "keywords": [
-    "react",
+    "ai-agent",
+    "ai-friendly",
+    "ai-integration",
     "animation",
+    "autonomous-agent",
+    "chatgpt",
+    "claude",
+    "code-generation",
+    "copilot",
     "framer-motion",
     "hooks",
+    "llm",
     "motion",
+    "openai",
+    "react",
     "ui"
   ],
   "author": "Upendra Manike <upendra.manike@gmail.com>",

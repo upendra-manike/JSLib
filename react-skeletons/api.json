@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/react-skeletons",
+  "description": "Auto Placeholder Generator for React - Auto-generate skeleton loading states from existing DOM or component structure. Improve UX with beautiful loading states. Perfect for React applications and dashboards.",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/react-skeletons'",
+      "example": ""
+    }
+  }
+}

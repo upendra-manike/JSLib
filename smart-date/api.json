@@ -1,0 +1,54 @@
+{
+  "name": "@upendra.manike/smart-date",
+  "description": "Human-friendly date formatting library",
+  "version": "1.0.1",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "timeAgo",
+      "description": "Convert timestamp to natural language (e.g., \"2 hours ago\")",
+      "params": {
+        "date": "Date"
+      },
+      "returns": "string",
+      "example": "timeAgo(new Date(Date.now() - 3600000)) // '1 hour ago'",
+      "usage": "import { timeAgo } from '@upendra.manike/smart-date'"
+    },
+    {
+      "name": "formatDate",
+      "description": "Format date with custom pattern",
+      "params": {
+        "date": "Date",
+        "pattern": "string"
+      },
+      "returns": "string",
+      "example": "formatDate(new Date(), 'YYYY-MM-DD')",
+      "usage": "import { formatDate } from '@upendra.manike/smart-date'"
+    },
+    {
+      "name": "addDays",
+      "description": "Add days to a date",
+      "params": {
+        "date": "Date",
+        "days": "number"
+      },
+      "returns": "Date",
+      "example": "addDays(new Date(), 1)",
+      "usage": "import { addDays } from '@upendra.manike/smart-date'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { timeAgo } from '@upendra.manike/smart-date'",
+      "example": "timeAgo(new Date(Date.now() - 3600000)) // '1 hour ago'"
+    }
+  }
+}

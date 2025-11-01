@@ -1,0 +1,43 @@
+{
+  "name": "@upendra.manike/ai-mini",
+  "description": "Universal LLM Client - Unified API for all AI providers",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "AIMini",
+      "description": "Universal AI client supporting OpenAI, Gemini, Claude, Groq",
+      "params": {
+        "config": "AIMiniConfig"
+      },
+      "returns": "AIMini",
+      "example": "const ai = new AIMini({ provider: 'openai', apiKey: key })",
+      "usage": "import { AIMini } from '@upendra.manike/ai-mini'"
+    },
+    {
+      "name": "ask",
+      "description": "Ask a question to the AI model",
+      "params": {
+        "prompt": "string",
+        "options": "object"
+      },
+      "returns": "Promise<string>",
+      "example": "await ai.ask('Summarize this text')",
+      "usage": "import { ask } from '@upendra.manike/ai-mini'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { AIMini } from '@upendra.manike/ai-mini'",
+      "example": "const ai = new AIMini({ provider: 'openai', apiKey: key })"
+    }
+  }
+}

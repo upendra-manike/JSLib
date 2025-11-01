@@ -24,13 +24,23 @@
     "type-check": "tsc --noEmit"
   },
   "keywords": [
-    "fetch",
+    "ai-agent",
+    "ai-friendly",
+    "ai-integration",
     "api",
-    "http",
+    "autonomous-agent",
     "cache",
+    "chatgpt",
+    "claude",
+    "code-generation",
+    "copilot",
+    "fetch",
+    "http",
+    "lightweight",
+    "llm",
     "localStorage",
-    "request",
-    "lightweight"
+    "openai",
+    "request"
   ],
   "author": "Upendra Manike <upendra.manike@gmail.com>",
   "license": "MIT",

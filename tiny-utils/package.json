@@ -29,12 +29,22 @@
     "type-check": "tsc --noEmit"
   },
   "keywords": [
-    "utilities",
-    "lodash",
+    "ai-agent",
+    "ai-friendly",
+    "ai-integration",
+    "autonomous-agent",
+    "chatgpt",
+    "claude",
+    "code-generation",
+    "copilot",
     "es6",
-    "tree-shakable",
     "lightweight",
-    "modern"
+    "llm",
+    "lodash",
+    "modern",
+    "openai",
+    "tree-shakable",
+    "utilities"
   ],
   "author": "Upendra Manike <upendra.manike@gmail.com>",
   "license": "MIT",

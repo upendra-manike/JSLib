@@ -1,0 +1,54 @@
+{
+  "name": "@upendra.manike/smart-storage",
+  "description": "Unified storage API with TTL support",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "createStorage",
+      "description": "Create storage instance with configurable backend",
+      "params": {
+        "config": "StorageConfig"
+      },
+      "returns": "Storage",
+      "example": "const storage = createStorage({ type: 'localStorage' })",
+      "usage": "import { createStorage } from '@upendra.manike/smart-storage'"
+    },
+    {
+      "name": "set",
+      "description": "Set value with optional TTL",
+      "params": {
+        "key": "string",
+        "value": "any",
+        "ttl": "number"
+      },
+      "returns": "Promise<void>",
+      "example": "await storage.set('key', data, 3600000)",
+      "usage": "import { set } from '@upendra.manike/smart-storage'"
+    },
+    {
+      "name": "get",
+      "description": "Get value from storage",
+      "params": {
+        "key": "string"
+      },
+      "returns": "Promise<any>",
+      "example": "const data = await storage.get('key')",
+      "usage": "import { get } from '@upendra.manike/smart-storage'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { createStorage } from '@upendra.manike/smart-storage'",
+      "example": "const storage = createStorage({ type: 'localStorage' })"
+    }
+  }
+}

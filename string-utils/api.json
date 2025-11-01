@@ -1,0 +1,53 @@
+{
+  "name": "@upendra.manike/string-utils",
+  "description": "String manipulation utilities",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "camelCase",
+      "description": "Convert string to camelCase",
+      "params": {
+        "str": "string"
+      },
+      "returns": "string",
+      "example": "camelCase('hello world') // 'helloWorld'",
+      "usage": "import { camelCase } from '@upendra.manike/string-utils'"
+    },
+    {
+      "name": "slugify",
+      "description": "Convert string to URL-friendly slug",
+      "params": {
+        "str": "string"
+      },
+      "returns": "string",
+      "example": "slugify('Hello World!') // 'hello-world'",
+      "usage": "import { slugify } from '@upendra.manike/string-utils'"
+    },
+    {
+      "name": "truncate",
+      "description": "Truncate string to specified length",
+      "params": {
+        "str": "string",
+        "length": "number"
+      },
+      "returns": "string",
+      "example": "truncate('Long text', 5) // 'Long ...'",
+      "usage": "import { truncate } from '@upendra.manike/string-utils'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { camelCase } from '@upendra.manike/string-utils'",
+      "example": "camelCase('hello world') // 'helloWorld'"
+    }
+  }
+}

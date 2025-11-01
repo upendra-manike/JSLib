@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/lite-fetcher",
+  "description": "Modern, tiny utility library for API calls + caching with fetch + localStorage built-in",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/lite-fetcher'",
+      "example": ""
+    }
+  }
+}

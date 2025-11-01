@@ -1,0 +1,43 @@
+{
+  "name": "@upendra.manike/fetch-plus",
+  "description": "Next-gen Fetch Wrapper - Lightweight, modern replacement for Axios",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "FetchPlus",
+      "description": "Enhanced fetch client with retry, timeout, interceptors, and caching",
+      "params": {
+        "config": "FetchPlusConfig"
+      },
+      "returns": "FetchPlus",
+      "example": "const api = new FetchPlus({ baseURL: 'https://api.example.com' })",
+      "usage": "import { FetchPlus } from '@upendra.manike/fetch-plus'"
+    },
+    {
+      "name": "createApi",
+      "description": "Create a preconfigured API client",
+      "params": {
+        "baseURL": "string",
+        "options": "object"
+      },
+      "returns": "FetchPlus",
+      "example": "const api = createApi('https://api.example.com')",
+      "usage": "import { createApi } from '@upendra.manike/fetch-plus'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { FetchPlus } from '@upendra.manike/fetch-plus'",
+      "example": "const api = new FetchPlus({ baseURL: 'https://api.example.com' })"
+    }
+  }
+}

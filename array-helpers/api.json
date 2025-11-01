@@ -1,0 +1,53 @@
+{
+  "name": "@upendra.manike/array-helpers",
+  "description": "Array manipulation utilities",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "groupBy",
+      "description": "Group array elements by key",
+      "params": {
+        "array": "Array<any>",
+        "keyFn": "Function"
+      },
+      "returns": "object",
+      "example": "groupBy(users, u => u.role)",
+      "usage": "import { groupBy } from '@upendra.manike/array-helpers'"
+    },
+    {
+      "name": "average",
+      "description": "Calculate average of numbers",
+      "params": {
+        "array": "Array<number>"
+      },
+      "returns": "number",
+      "example": "average([1,2,3,4]) // 2.5",
+      "usage": "import { average } from '@upendra.manike/array-helpers'"
+    },
+    {
+      "name": "removeDuplicates",
+      "description": "Remove duplicate values from array",
+      "params": {
+        "array": "Array<any>"
+      },
+      "returns": "Array<any>",
+      "example": "removeDuplicates([1,2,2,3]) // [1,2,3]",
+      "usage": "import { removeDuplicates } from '@upendra.manike/array-helpers'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { groupBy } from '@upendra.manike/array-helpers'",
+      "example": "groupBy(users, u => u.role)"
+    }
+  }
+}

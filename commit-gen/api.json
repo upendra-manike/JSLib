@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/commit-gen",
+  "description": "Natural Language to Conventional Commit - CLI tool to generate conventional commit messages automatically. Convert plain English to semantic commit format. Perfect for Git workflows and CI/CD pipelines.",
+  "version": "1.0.5",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/commit-gen'",
+      "example": ""
+    }
+  }
+}

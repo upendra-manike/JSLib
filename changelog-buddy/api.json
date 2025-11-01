@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/changelog-buddy",
+  "description": "Auto Changelog Generator for Git - Reads commits and generates markdown changelog with emojis + semver bump. Perfect for automation and CI/CD pipelines. Generate professional changelogs automatically.",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/changelog-buddy'",
+      "example": ""
+    }
+  }
+}

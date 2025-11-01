@@ -1,0 +1,52 @@
+{
+  "name": "@upendra.manike/validators",
+  "description": "Validation utilities",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "isEmail",
+      "description": "Validate email address",
+      "params": {
+        "email": "string"
+      },
+      "returns": "boolean",
+      "example": "isEmail('test@example.com') // true",
+      "usage": "import { isEmail } from '@upendra.manike/validators'"
+    },
+    {
+      "name": "isUrl",
+      "description": "Validate URL",
+      "params": {
+        "url": "string"
+      },
+      "returns": "boolean",
+      "example": "isUrl('https://example.com') // true",
+      "usage": "import { isUrl } from '@upendra.manike/validators'"
+    },
+    {
+      "name": "isEmpty",
+      "description": "Check if value is empty",
+      "params": {
+        "value": "any"
+      },
+      "returns": "boolean",
+      "example": "isEmpty(null) // true",
+      "usage": "import { isEmpty } from '@upendra.manike/validators'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { isEmail } from '@upendra.manike/validators'",
+      "example": "isEmail('test@example.com') // true"
+    }
+  }
+}

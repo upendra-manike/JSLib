@@ -1,0 +1,75 @@
+{
+  "name": "@upendra.manike/tiny-utils",
+  "description": "Ultra-lightweight JavaScript utility functions - modern ES6+ alternatives to Lodash",
+  "version": "1.0.1",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [
+    {
+      "name": "flatten",
+      "description": "Flatten nested arrays into a single level",
+      "params": {
+        "array": "Array<any>"
+      },
+      "returns": "Array<any>",
+      "example": "flatten([1, [2, 3]]) // [1, 2, 3]",
+      "usage": "import { flatten } from '@upendra.manike/tiny-utils'"
+    },
+    {
+      "name": "merge",
+      "description": "Deep merge two objects",
+      "params": {
+        "target": "object",
+        "source": "object"
+      },
+      "returns": "object",
+      "example": "merge({a: 1}, {b: 2}) // {a: 1, b: 2}",
+      "usage": "import { merge } from '@upendra.manike/tiny-utils'"
+    },
+    {
+      "name": "chunk",
+      "description": "Split array into chunks of specified size",
+      "params": {
+        "array": "Array<any>",
+        "size": "number"
+      },
+      "returns": "Array<Array<any>>",
+      "example": "chunk([1,2,3,4], 2) // [[1,2], [3,4]]",
+      "usage": "import { chunk } from '@upendra.manike/tiny-utils'"
+    },
+    {
+      "name": "uniq",
+      "description": "Remove duplicates from array",
+      "params": {
+        "array": "Array<any>"
+      },
+      "returns": "Array<any>",
+      "example": "uniq([1,2,2,3]) // [1,2,3]",
+      "usage": "import { uniq } from '@upendra.manike/tiny-utils'"
+    },
+    {
+      "name": "groupBy",
+      "description": "Group array elements by key",
+      "params": {
+        "array": "Array<any>",
+        "keyFn": "Function"
+      },
+      "returns": "object",
+      "example": "groupBy(users, u => u.role)",
+      "usage": "import { groupBy } from '@upendra.manike/tiny-utils'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { flatten } from '@upendra.manike/tiny-utils'",
+      "example": "flatten([1, [2, 3]]) // [1, 2, 3]"
+    }
+  }
+}

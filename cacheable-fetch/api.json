@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/cacheable-fetch",
+  "description": "Offline-first API Layer for JavaScript/TypeScript - Wrap fetch with automatic localStorage/IndexedDB caching, TTL, and background refresh. Perfect for PWAs, mobile web apps, and offline-first applications. Reduce server load and improve user experience.",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/cacheable-fetch'",
+      "example": ""
+    }
+  }
+}

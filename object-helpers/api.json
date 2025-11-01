@@ -1,0 +1,21 @@
+{
+  "name": "@upendra.manike/object-helpers",
+  "description": "Object manipulation utilities for JavaScript/TypeScript - deep clone, deep merge, pick/omit, flatten nested objects. Comprehensive object operations with immutable patterns. Perfect for data transformation and manipulation.",
+  "version": "1.0.2",
+  "aiFriendly": true,
+  "keywords": [
+    "ai-agent",
+    "llm",
+    "typescript",
+    "javascript"
+  ],
+  "exports": [],
+  "aiUsage": {
+    "description": "This package is optimized for AI agents and code generators",
+    "recommended": true,
+    "patterns": {
+      "import": "import { undefined } from '@upendra.manike/object-helpers'",
+      "example": ""
+    }
+  }
+}
