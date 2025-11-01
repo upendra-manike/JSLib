@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Newsletter Setup Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f3f2ef;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .close-btn:hover {
+            background: #f3f2ef;
+            border-radius: 4px;
+        }
+        
+        .modal-body {
+            padding: 24px;
+        }
+        
+        .intro-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        
+        .intro-text a {
+            color: #0a66c2;
+            text-decoration: none;
+        }
+        
+        .intro-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+            margin-top: 32px;
+        }
+        
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-group-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+        
+        .required::after {
+            content: "*";
+            color: #d11141;
+            margin-left: 2px;
+        }
+        
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #0a66c2;
+            box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .help-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 6px;
+        }
+        
+        .error-message {
+            background: #fff3f3;
+            border: 1px solid #d11141;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: #d11141;
+            margin-top: 6px;
+        }
+        
+        .image-upload {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        
+        .image-placeholder {
+            width: 80px;
+            height: 80px;
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #f9f9f9;
+        }
+        
+        .image-placeholder svg {
+            width: 32px;
+            height: 32px;
+            fill: #666;
+        }
+        
+        .image-info {
+            flex: 1;
+        }
+        
+        .upload-btn {
+            background: white;
+            border: 1px solid #000;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+        
+        .upload-btn:hover {
+            background: #f3f2ef;
+        }
+        
+        .info-box {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .info-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .info-content {
+            flex: 1;
+        }
+        
+        .info-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        
+        .info-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-cancel {
+            background: white;
+            border: 1px solid #0a66c2;
+            color: #0a66c2;
+        }
+        
+        .btn-cancel:hover {
+            background: #e8f4f8;
+        }
+        
+        .btn-done {
+            background: #0a66c2;
+            color: white;
+        }
+        
+        .btn-done:hover {
+            background: #004182;
+        }
+        
+        .btn-done:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="modal-header">
+            <h2 class="modal-title">Create a newsletter</h2>
+            <button class="close-btn" onclick="window.close()">×</button>
+        </div>
+        
+        <div class="modal-body">
+            <p class="intro-text">
+                Newsletters on LinkedIn allow you to share your perspective regularly by publishing articles at the cadence you choose. Your subscribers will receive a push notification and email after each new edition of your newsletter. Limit 5 newsletters per member. <a href="#" target="_blank">Learn More</a>
+            </p>
+            
+            <h3 class="section-title">Newsletter details</h3>
+            
+            <form id="newsletterForm">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="title" class="required">Newsletter title</label>
+                        <input type="text" id="title" name="title" placeholder="Add a title to your newsletter" required>
+                        <div class="error-message" id="titleError" style="display: none;">
+                            Please fill in this field.
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="frequency" class="required">How often do you want to publish?</label>
+                        <select id="frequency" name="frequency" required>
+                            <option value="">Select one</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly" selected>Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description" class="required">Newsletter description</label>
+                    <textarea id="description" name="description" placeholder="Add a description to your newsletter" required></textarea>
+                    <p class="help-text">This description appears alongside your newsletter title</p>
+                    <div class="error-message" id="descriptionError" style="display: none;">
+                        Please fill in this field.
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Newsletter logo/image</label>
+                    <div class="image-upload">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0-10c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2zm0 18c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8zm-2-10h4v6H10v-6z"/>
+                            </svg>
+                        </div>
+                        <div class="image-info">
+                            <p class="help-text">
+                                Add an image or logo for your newsletter to increase engagement. The recommended image size is 300x300 pixels.
+                            </p>
+                            <button type="button" class="upload-btn" onclick="document.getElementById('imageUpload').click()">
+                                Upload image
+                            </button>
+                            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="12" y1="13" x2="12" y2="16" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-title">Connections and followers invitation</div>
+                        <div class="info-text">Your connections and followers will be invited to subscribe</div>
+                        <div class="info-text" style="margin-top: 4px;">
+                            We'll notify your network when you publish the first edition of your newsletter and invite new followers to subscribe.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" stroke-width="2" fill="#28a745"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-title">Self-subscription</div>
+                        <div class="info-text">You will be subscribed to your newsletter</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-cancel" onclick="window.close()">Cancel</button>
+            <button type="button" class="btn btn-done" onclick="submitForm()">Done</button>
+        </div>
+    </div>
+    
+    <script>
+        const form = document.getElementById('newsletterForm');
+        const titleInput = document.getElementById('title');
+        const descriptionInput = document.getElementById('description');
+        const titleError = document.getElementById('titleError');
+        const descriptionError = document.getElementById('descriptionError');
+        
+        function validateForm() {
+            let isValid = true;
+            
+            if (!titleInput.value.trim()) {
+                titleError.style.display = 'block';
+                titleInput.style.borderColor = '#d11141';
+                isValid = false;
+            } else {
+                titleError.style.display = 'none';
+                titleInput.style.borderColor = '#ccc';
+            }
+            
+            if (!descriptionInput.value.trim()) {
+                descriptionError.style.display = 'block';
+                descriptionInput.style.borderColor = '#d11141';
+                isValid = false;
+            } else {
+                descriptionError.style.display = 'none';
+                descriptionInput.style.borderColor = '#ccc';
+            }
+            
+            return isValid;
+        }
+        
+        function submitForm() {
+            if (validateForm()) {
+                const formData = {
+                    title: titleInput.value,
+                    frequency: document.getElementById('frequency').value,
+                    description: descriptionInput.value,
+                    image: document.getElementById('imageUpload').files[0]?.name || 'None'
+                };
+                
+                console.log('Newsletter Data:', formData);
+                alert('Newsletter data prepared! Check console for details.\n\nNote: This is a template. Use this data to fill the actual LinkedIn form.');
+                
+                // Optional: Copy to clipboard or download as JSON
+                navigator.clipboard.writeText(JSON.stringify(formData, null, 2)).then(() => {
+                    console.log('Data copied to clipboard!');
+                });
+            }
+        }
+        
+        // Real-time validation
+        titleInput.addEventListener('blur', validateForm);
+        descriptionInput.addEventListener('blur', validateForm);
+        
+        // Handle image upload preview
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const placeholder = document.querySelector('.image-placeholder');
+                    placeholder.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
+
