@@ -1,0 +1,220 @@
+{
+  "title": "JSLib - 22 Modern JavaScript/TypeScript Libraries",
+  "description": "Comprehensive usage documentation for all 22 production-ready npm packages",
+  "packages": [
+    {
+      "name": "@upendra.manike/tiny-utils",
+      "category": "utilities",
+      "description": "Ultra-lightweight JavaScript utility functions - modern ES6+ alternatives to Lodash",
+      "keywords": ["lodash", "utilities", "helpers", "es6", "tree-shakable"],
+      "install": "npm install @upendra.manike/tiny-utils",
+      "example": "import { flatten, merge } from '@upendra.manike/tiny-utils';\nflatten([1, [2, 3]]); // [1, 2, 3]",
+      "useCases": ["Replace Lodash", "Array manipulation", "Object utilities", "Functional helpers"]
+    },
+    {
+      "name": "@upendra.manike/smart-date",
+      "category": "utilities",
+      "description": "Human-friendly date formatting library - Convert timestamps to natural language",
+      "keywords": ["date", "time", "formatting", "human-readable", "time-ago"],
+      "install": "npm install @upendra.manike/smart-date",
+      "example": "import { timeAgo } from '@upendra.manike/smart-date';\ntimeAgo(new Date(Date.now() - 3600000)); // '1 hour ago'",
+      "useCases": ["Social media timestamps", "Dashboard displays", "User-friendly dates"]
+    },
+    {
+      "name": "@upendra.manike/react-motion-kit",
+      "category": "react",
+      "description": "Prebuilt animation hooks for React - Built on Framer Motion",
+      "keywords": ["react", "animation", "framer-motion", "hooks", "ui"],
+      "install": "npm install @upendra.manike/react-motion-kit",
+      "example": "import { useHover } from '@upendra.manike/react-motion-kit';\nconst { ref, whileHover } = useHover({ scale: 1.1 });",
+      "useCases": ["Interactive UI", "Page transitions", "Micro-interactions", "Hover effects"]
+    },
+    {
+      "name": "@upendra.manike/fetch-plus",
+      "category": "api",
+      "description": "Next-gen Fetch Wrapper - Lightweight Axios replacement with retry, timeout, interceptors",
+      "keywords": ["axios", "fetch", "http", "api-client", "retry"],
+      "install": "npm install @upendra.manike/fetch-plus",
+      "example": "import { FetchPlus } from '@upendra.manike/fetch-plus';\nconst api = new FetchPlus({ baseURL: 'https://api.example.com' });",
+      "useCases": ["Axios replacement", "API clients", "Request interceptors", "Automatic retry"]
+    },
+    {
+      "name": "@upendra.manike/api-chain",
+      "category": "api",
+      "description": "Declarative API chaining - Transform callback hell into beautiful workflows",
+      "keywords": ["api", "chain", "workflow", "sequential", "async"],
+      "install": "npm install @upendra.manike/api-chain",
+      "example": "import { createChain } from '@upendra.manike/api-chain';\nawait api.get('/users').then(res => res.data).execute();",
+      "useCases": ["Dashboard loading", "Multi-step forms", "Data pipelines", "Sequential API calls"]
+    },
+    {
+      "name": "@upendra.manike/lite-fetcher",
+      "category": "api",
+      "description": "Lightweight API client with built-in caching",
+      "keywords": ["fetch", "cache", "api-client", "caching", "http"],
+      "install": "npm install @upendra.manike/lite-fetcher",
+      "example": "import { createApiClient } from '@upendra.manike/lite-fetcher';\nconst api = createApiClient({ cache: { enabled: true } });",
+      "useCases": ["API caching", "Performance optimization", "Reduce server load"]
+    },
+    {
+      "name": "@upendra.manike/cacheable-fetch",
+      "category": "api",
+      "description": "Offline-first API Layer - Wrap fetch with automatic localStorage/IndexedDB caching",
+      "keywords": ["offline", "pwa", "cache", "indexedDB", "localStorage"],
+      "install": "npm install @upendra.manike/cacheable-fetch",
+      "example": "import { cacheableFetch } from '@upendra.manike/cacheable-fetch';\nawait cacheableFetch('/api/data', { cache: 'localStorage', ttl: 300000 });",
+      "useCases": ["PWAs", "Offline-first apps", "Mobile web", "Background refresh"]
+    },
+    {
+      "name": "@upendra.manike/form-genie",
+      "category": "react",
+      "description": "Schema to Form generator - Build React forms from JSON schema or Zod validation",
+      "keywords": ["react", "form", "schema", "zod", "validation"],
+      "install": "npm install @upendra.manike/form-genie",
+      "example": "import { FormGenie } from '@upendra.manike/form-genie';\n<FormGenie schema={schema} onSubmit={handleSubmit} />",
+      "useCases": ["Admin panels", "Dashboards", "Data entry forms", "Dynamic forms"]
+    },
+    {
+      "name": "@upendra.manike/motion-kit",
+      "category": "animations",
+      "description": "Framework-agnostic animation library - Works with React, Vue, Svelte, vanilla JS",
+      "keywords": ["animation", "motion", "vanilla-js", "framework-agnostic"],
+      "install": "npm install @upendra.manike/motion-kit",
+      "example": "import { fadeIn, slideIn } from '@upendra.manike/motion-kit';\nfadeIn(element); slideIn(element, 'up');",
+      "useCases": ["Vanilla JS animations", "Cross-framework", "Page transitions"]
+    },
+    {
+      "name": "@upendra.manike/ai-mini",
+      "category": "ai",
+      "description": "Universal LLM Client - Unified API for OpenAI, Gemini, Claude, Groq",
+      "keywords": ["ai", "llm", "openai", "claude", "gpt", "chatgpt"],
+      "install": "npm install @upendra.manike/ai-mini",
+      "example": "import { AIMini } from '@upendra.manike/ai-mini';\nconst ai = new AIMini({ provider: 'openai', apiKey: key });",
+      "useCases": ["AI applications", "Chatbots", "LLM integrations", "Multi-provider AI"]
+    },
+    {
+      "name": "@upendra.manike/smart-storage",
+      "category": "storage",
+      "description": "Unified storage API - LocalStorage + SessionStorage + IndexedDB with TTL",
+      "keywords": ["storage", "localStorage", "indexedDB", "cache", "ttl"],
+      "install": "npm install @upendra.manike/smart-storage",
+      "example": "import { createStorage } from '@upendra.manike/smart-storage';\nawait storage.set('key', data, 3600000); // 1 hour TTL",
+      "useCases": ["Caching", "Data persistence", "Offline storage", "Session management"]
+    },
+    {
+      "name": "@upendra.manike/commit-gen",
+      "category": "cli",
+      "description": "Natural Language to Conventional Commit - CLI tool for semantic commits",
+      "keywords": ["commit", "conventional", "cli", "git"],
+      "install": "npm install -g @upendra.manike/commit-gen",
+      "example": "npx commit-gen 'fix login bug'\n# Output: fix(auth): fix login bug",
+      "useCases": ["Git workflows", "CI/CD pipelines", "Semantic commits", "Automation"]
+    },
+    {
+      "name": "@upendra.manike/env-checker",
+      "category": "validation",
+      "description": "Environment Variable Validator - Validate env vars at startup",
+      "keywords": ["env", "validation", "config", "dotenv"],
+      "install": "npm install @upendra.manike/env-checker",
+      "example": "import { checkEnv } from '@upendra.manike/env-checker';\ncheckEnv({ OPENAI_KEY: 'string', PORT: 'number' });",
+      "useCases": ["Startup validation", "Config checking", "Error prevention", "Node.js/React/Next.js"]
+    },
+    {
+      "name": "@upendra.manike/react-skeletons",
+      "category": "react",
+      "description": "Auto Placeholder Generator - Auto-generate skeleton loading states",
+      "keywords": ["react", "skeleton", "loading", "placeholder"],
+      "install": "npm install @upendra.manike/react-skeletons",
+      "example": "import { Skeleton } from '@upendra.manike/react-skeletons';\n<Skeleton width='200px' height='20px' />",
+      "useCases": ["Loading states", "Content placeholders", "Better UX", "Performance indicators"]
+    },
+    {
+      "name": "@upendra.manike/changelog-buddy",
+      "category": "cli",
+      "description": "Auto Changelog Generator - Reads commits and generates markdown changelog",
+      "keywords": ["changelog", "git", "cli", "semver"],
+      "install": "npm install -g @upendra.manike/changelog-buddy",
+      "example": "npx changelog-buddy\n# Generates CHANGELOG.md",
+      "useCases": ["Release management", "CI/CD automation", "Version documentation"]
+    },
+    {
+      "name": "@upendra.manike/string-utils",
+      "category": "utilities",
+      "description": "String manipulation utilities - camelCase, slugify, truncate, CSV conversion",
+      "keywords": ["string", "camelCase", "slugify", "csv"],
+      "install": "npm install @upendra.manike/string-utils",
+      "example": "import { camelCase, slugify } from '@upendra.manike/string-utils';\ncamelCase('hello world'); // 'helloWorld'",
+      "useCases": ["URL slugs", "Data conversion", "String normalization", "CSV parsing"]
+    },
+    {
+      "name": "@upendra.manike/array-helpers",
+      "category": "utilities",
+      "description": "Array manipulation utilities - group by, aggregate, statistics, remove duplicates",
+      "keywords": ["array", "group", "aggregate", "statistics"],
+      "install": "npm install @upendra.manike/array-helpers",
+      "example": "import { groupBy, average } from '@upendra.manike/array-helpers';\ngroupBy(users, u => u.role); average([1,2,3,4]); // 2.5",
+      "useCases": ["Data aggregation", "Statistical analysis", "Array operations"]
+    },
+    {
+      "name": "@upendra.manike/object-helpers",
+      "category": "utilities",
+      "description": "Object manipulation utilities - deep clone, deep merge, pick/omit, flatten",
+      "keywords": ["object", "clone", "merge", "pick", "omit"],
+      "install": "npm install @upendra.manike/object-helpers",
+      "example": "import { deepClone, deepMerge } from '@upendra.manike/object-helpers';\nconst cloned = deepClone(original);",
+      "useCases": ["Object manipulation", "Data transformation", "Immutable operations"]
+    },
+    {
+      "name": "@upendra.manike/validators",
+      "category": "validation",
+      "description": "Validation utilities - email, URL, phone, empty checks, type checks",
+      "keywords": ["validation", "email", "url", "phone"],
+      "install": "npm install @upendra.manike/validators",
+      "example": "import { isEmail, isUrl } from '@upendra.manike/validators';\nisEmail('test@example.com'); // true",
+      "useCases": ["Form validation", "Input validation", "Type checking"]
+    },
+    {
+      "name": "@upendra.manike/dom-helpers",
+      "category": "utilities",
+      "description": "DOM and browser utilities - clipboard, viewport detection, smooth scroll, debounce/throttle",
+      "keywords": ["dom", "clipboard", "debounce", "throttle"],
+      "install": "npm install @upendra.manike/dom-helpers",
+      "example": "import { copyToClipboard, debounce } from '@upendra.manike/dom-helpers';\nawait copyToClipboard('Hello');",
+      "useCases": ["Performance optimization", "User interactions", "Scroll handling"]
+    },
+    {
+      "name": "@upendra.manike/id-generator",
+      "category": "utilities",
+      "description": "Secure ID generation - UUID, GUID, short unique strings, hash, mask",
+      "keywords": ["uuid", "guid", "id", "hash"],
+      "install": "npm install @upendra.manike/id-generator",
+      "example": "import { uuid, shortId } from '@upendra.manike/id-generator';\nuuid(); shortId(8);",
+      "useCases": ["Unique identifiers", "Token generation", "Data masking"]
+    },
+    {
+      "name": "@upendra.manike/dev-utils",
+      "category": "utilities",
+      "description": "Developer utilities - logging, timing, query string parser, pub-sub event emitter",
+      "keywords": ["logging", "timing", "query", "event-emitter"],
+      "install": "npm install @upendra.manike/dev-utils",
+      "example": "import { logger, measureTime } from '@upendra.manike/dev-utils';\nconst log = logger('MyApp');",
+      "useCases": ["Development tools", "Performance measurement", "Event handling"]
+    }
+  ],
+  "categories": {
+    "utilities": ["tiny-utils", "string-utils", "array-helpers", "object-helpers", "dom-helpers", "id-generator", "dev-utils", "smart-date"],
+    "react": ["react-motion-kit", "form-genie", "react-skeletons"],
+    "api": ["fetch-plus", "api-chain", "lite-fetcher", "cacheable-fetch"],
+    "validation": ["validators", "env-checker"],
+    "cli": ["commit-gen", "changelog-buddy"],
+    "storage": ["smart-storage"],
+    "animations": ["motion-kit"],
+    "ai": ["ai-mini"]
+  },
+  "stats": {
+    "total": 22,
+    "published": 22,
+    "categories": 8
+  }
+}
+

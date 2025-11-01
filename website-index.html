@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JSLib - Collection of 22 modern, production-ready JavaScript/TypeScript libraries. Utilities, date helpers, React components, API clients, and more.">
+    <meta name="keywords" content="javascript, typescript, npm packages, utilities, lodash alternative, axios alternative, react, animations, api client">
+    <title>JSLib - 22 Modern JavaScript Libraries | Usage Documentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2em; opacity: 0.9; }
+        .search-box {
+            margin: 30px 0;
+            padding: 15px;
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .package-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .package-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .package-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .package-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .package-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .keyword {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #555;
+        }
+        .package-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9em;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .categories {
+            margin: 30px 0;
+        }
+        .category-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .category-btn:hover, .category-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 JSLib</h1>
+        <p class="subtitle">22 Modern JavaScript/TypeScript Libraries</p>
+        <p style="margin-top: 10px; opacity: 0.8;">Production-ready, lightweight, and well-documented</p>
+    </header>
+
+    <div class="container">
+        <input type="text" id="searchBox" class="search-box" placeholder="🔍 Search packages... (e.g., lodash alternative, axios replacement, react animations)">
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All (22)</button>
+            <button class="category-btn" data-category="utilities">Utilities</button>
+            <button class="category-btn" data-category="react">React</button>
+            <button class="category-btn" data-category="api">API/Network</button>
+            <button class="category-btn" data-category="validation">Validation</button>
+            <button class="category-btn" data-category="cli">CLI Tools</button>
+            <button class="category-btn" data-category="storage">Storage</button>
+            <button class="category-btn" data-category="animations">Animations</button>
+        </div>
+
+        <div id="packagesGrid" class="packages-grid">
+            <!-- Packages will be dynamically loaded -->
+        </div>
+    </div>
+
+    <footer>
+        <p>📦 View all packages on <a href="https://www.npmjs.com/org/upendra.manike" target="_blank">npm</a></p>
+        <p>💻 <a href="https://github.com/upendramyorigami/JSLib" target="_blank">GitHub Repository</a></p>
+        <p>Made with ❤️ by Upendra Manike</p>
+    </footer>
+
+    <script>
+        const packages = [
+            {
+                name: '@upendra.manike/tiny-utils',
+                description: 'Ultra-lightweight JavaScript utility functions - modern ES6+ alternatives to Lodash. Tree-shakable, zero-dependency utilities.',
+                category: 'utilities',
+                keywords: ['lodash', 'utilities', 'helpers', 'es6'],
+                install: 'npm install @upendra.manike/tiny-utils',
+                example: `import { flatten, merge, chunk } from '@upendra.manike/tiny-utils';
+flatten([1, [2, 3]]); // [1, 2, 3]`
+            },
+            {
+                name: '@upendra.manike/smart-date',
+                description: 'Human-friendly date formatting library. Convert timestamps to natural language like "2h ago", "yesterday".',
+                category: 'utilities',
+                keywords: ['date', 'time', 'formatting', 'human-readable'],
+                install: 'npm install @upendra.manike/smart-date',
+                example: `import { timeAgo } from '@upendra.manike/smart-date';
+timeAgo(new Date(Date.now() - 3600000)); // "1 hour ago"`
+            },
+            {
+                name: '@upendra.manike/react-motion-kit',
+                description: 'Prebuilt animation hooks for React - Built on Framer Motion. Production-ready animation hooks.',
+                category: 'react',
+                keywords: ['react', 'animation', 'framer-motion', 'hooks'],
+                install: 'npm install @upendra.manike/react-motion-kit',
+                example: `import { useHover, useFade } from '@upendra.manike/react-motion-kit';
+const { ref, whileHover } = useHover({ scale: 1.1 });`
+            },
+            {
+                name: '@upendra.manike/fetch-plus',
+                description: 'Next-gen Fetch Wrapper - Lightweight, modern replacement for Axios with retry, timeout, interceptors.',
+                category: 'api',
+                keywords: ['axios', 'fetch', 'http', 'api-client'],
+                install: 'npm install @upendra.manike/fetch-plus',
+                example: `import { FetchPlus } from '@upendra.manike/fetch-plus';
+const api = new FetchPlus({ baseURL: 'https://api.example.com' });`
+            },
+            {
+                name: '@upendra.manike/api-chain',
+                description: 'Declarative API chaining - Transform callback hell into beautiful workflows.',
+                category: 'api',
+                keywords: ['api', 'chain', 'workflow', 'sequential'],
+                install: 'npm install @upendra.manike/api-chain',
+                example: `import { createChain } from '@upendra.manike/api-chain';
+await api.get('/users').then(res => res.data).execute();`
+            },
+            {
+                name: '@upendra.manike/lite-fetcher',
+                description: 'Lightweight API client with built-in caching. Modern fetch wrapper with automatic caching.',
+                category: 'api',
+                keywords: ['fetch', 'cache', 'api-client', 'caching'],
+                install: 'npm install @upendra.manike/lite-fetcher',
+                example: `import { createApiClient } from '@upendra.manike/lite-fetcher';
+const api = createApiClient({ cache: { enabled: true } });`
+            },
+            {
+                name: '@upendra.manike/cacheable-fetch',
+                description: 'Offline-first API Layer - Wrap fetch with automatic localStorage/IndexedDB caching.',
+                category: 'api',
+                keywords: ['offline', 'pwa', 'cache', 'indexedDB'],
+                install: 'npm install @upendra.manike/cacheable-fetch',
+                example: `import { cacheableFetch } from '@upendra.manike/cacheable-fetch';
+await cacheableFetch('/api/data', { cache: 'localStorage', ttl: 300000 });`
+            },
+            {
+                name: '@upendra.manike/form-genie',
+                description: 'Schema to Form generator - Build React forms from JSON schema or Zod validation automatically.',
+                category: 'react',
+                keywords: ['react', 'form', 'schema', 'zod', 'validation'],
+                install: 'npm install @upendra.manike/form-genie',
+                example: `import { FormGenie } from '@upendra.manike/form-genie';
+<FormGenie schema={formSchema} onSubmit={handleSubmit} />`
+            },
+            {
+                name: '@upendra.manike/motion-kit',
+                description: 'Framework-agnostic animation library - Works with React, Vue, Svelte, and vanilla JS.',
+                category: 'animations',
+                keywords: ['animation', 'motion', 'vanilla-js', 'framework-agnostic'],
+                install: 'npm install @upendra.manike/motion-kit',
+                example: `import { fadeIn, slideIn } from '@upendra.manike/motion-kit';
+fadeIn(element); slideIn(element, 'up');`
+            },
+            {
+                name: '@upendra.manike/ai-mini',
+                description: 'Universal LLM Client - Unified API for OpenAI, Gemini, Claude, Groq and more.',
+                category: 'utilities',
+                keywords: ['ai', 'llm', 'openai', 'claude', 'gpt'],
+                install: 'npm install @upendra.manike/ai-mini',
+                example: `import { AIMini } from '@upendra.manike/ai-mini';
+const ai = new AIMini({ provider: 'openai', apiKey: key });`
+            },
+            {
+                name: '@upendra.manike/smart-storage',
+                description: 'Unified storage API - LocalStorage + SessionStorage + IndexedDB with TTL support.',
+                category: 'storage',
+                keywords: ['storage', 'localStorage', 'indexedDB', 'cache', 'ttl'],
+                install: 'npm install @upendra.manike/smart-storage',
+                example: `import { createStorage } from '@upendra.manike/smart-storage';
+await storage.set('key', data, 3600000); // 1 hour TTL`
+            },
+            {
+                name: '@upendra.manike/commit-gen',
+                description: 'Natural Language to Conventional Commit - CLI tool to generate conventional commit messages.',
+                category: 'cli',
+                keywords: ['commit', 'conventional', 'cli', 'git'],
+                install: 'npm install -g @upendra.manike/commit-gen',
+                example: `npx commit-gen "fix login bug"
+# Output: fix(auth): fix login bug`
+            },
+            {
+                name: '@upendra.manike/env-checker',
+                description: 'Environment Variable Validator - Validate env vars against schema at startup.',
+                category: 'validation',
+                keywords: ['env', 'validation', 'config', 'dotenv'],
+                install: 'npm install @upendra.manike/env-checker',
+                example: `import { checkEnv } from '@upendra.manike/env-checker';
+checkEnv({ OPENAI_KEY: 'string', PORT: 'number' });`
+            },
+            {
+                name: '@upendra.manike/react-skeletons',
+                description: 'Auto Placeholder Generator - Auto-generate skeleton loading states from existing DOM.',
+                category: 'react',
+                keywords: ['react', 'skeleton', 'loading', 'placeholder'],
+                install: 'npm install @upendra.manike/react-skeletons',
+                example: `import { Skeleton } from '@upendra.manike/react-skeletons';
+<Skeleton width="200px" height="20px" />`
+            },
+            {
+                name: '@upendra.manike/changelog-buddy',
+                description: 'Auto Changelog Generator - Reads commits and generates markdown changelog with emojis.',
+                category: 'cli',
+                keywords: ['changelog', 'git', 'cli', 'semver'],
+                install: 'npm install -g @upendra.manike/changelog-buddy',
+                example: `npx changelog-buddy
+# Generates CHANGELOG.md from git commits`
+            },
+            {
+                name: '@upendra.manike/string-utils',
+                description: 'String manipulation utilities - camelCase, slugify, truncate, CSV conversion.',
+                category: 'utilities',
+                keywords: ['string', 'camelCase', 'slugify', 'csv'],
+                install: 'npm install @upendra.manike/string-utils',
+                example: `import { camelCase, slugify } from '@upendra.manike/string-utils';
+camelCase('hello world'); // 'helloWorld'
+slugify('Hello World!'); // 'hello-world'`
+            },
+            {
+                name: '@upendra.manike/array-helpers',
+                description: 'Array manipulation utilities - group by, aggregate, statistics, remove duplicates.',
+                category: 'utilities',
+                keywords: ['array', 'group', 'aggregate', 'statistics'],
+                install: 'npm install @upendra.manike/array-helpers',
+                example: `import { groupBy, average } from '@upendra.manike/array-helpers';
+groupBy(users, u => u.role);
+average([1, 2, 3, 4]); // 2.5`
+            },
+            {
+                name: '@upendra.manike/object-helpers',
+                description: 'Object manipulation utilities - deep clone, deep merge, pick/omit, flatten.',
+                category: 'utilities',
+                keywords: ['object', 'clone', 'merge', 'pick', 'omit'],
+                install: 'npm install @upendra.manike/object-helpers',
+                example: `import { deepClone, deepMerge } from '@upendra.manike/object-helpers';
+const cloned = deepClone(original);
+const merged = deepMerge(target, source);`
+            },
+            {
+                name: '@upendra.manike/validators',
+                description: 'Validation utilities - email, URL, phone, empty checks, type checks.',
+                category: 'validation',
+                keywords: ['validation', 'email', 'url', 'phone'],
+                install: 'npm install @upendra.manike/validators',
+                example: `import { isEmail, isUrl } from '@upendra.manike/validators';
+isEmail('test@example.com'); // true
+isUrl('https://example.com'); // true`
+            },
+            {
+                name: '@upendra.manike/dom-helpers',
+                description: 'DOM and browser utilities - clipboard, viewport detection, smooth scroll, debounce/throttle.',
+                category: 'utilities',
+                keywords: ['dom', 'clipboard', 'debounce', 'throttle'],
+                install: 'npm install @upendra.manike/dom-helpers',
+                example: `import { copyToClipboard, debounce } from '@upendra.manike/dom-helpers';
+await copyToClipboard('Hello');
+const debounced = debounce(() => {}, 300);`
+            },
+            {
+                name: '@upendra.manike/id-generator',
+                description: 'Secure ID generation - UUID, GUID, short unique strings, hash, and mask utilities.',
+                category: 'utilities',
+                keywords: ['uuid', 'guid', 'id', 'hash'],
+                install: 'npm install @upendra.manike/id-generator',
+                example: `import { uuid, shortId } from '@upendra.manike/id-generator';
+uuid(); // 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+shortId(8); // 'aB3dE5fG'`
+            },
+            {
+                name: '@upendra.manike/dev-utils',
+                description: 'Developer utilities - logging, timing, query string parser, pub-sub event emitter.',
+                category: 'utilities',
+                keywords: ['logging', 'timing', 'query', 'event-emitter'],
+                install: 'npm install @upendra.manike/dev-utils',
+                example: `import { logger, measureTime } from '@upendra.manike/dev-utils';
+const log = logger('MyApp');
+const { time } = await measureTime(async () => {});`
+            }
+        ];
+
+        function renderPackages(filteredPackages) {
+            const grid = document.getElementById('packagesGrid');
+            grid.innerHTML = filteredPackages.map(pkg => `
+                <div class="package-card" data-category="${pkg.category}">
+                    <div class="package-name">${pkg.name}</div>
+                    <div class="package-description">${pkg.description}</div>
+                    <div class="package-keywords">
+                        ${pkg.keywords.slice(0, 4).map(k => `<span class="keyword">${k}</span>`).join('')}
+                    </div>
+                    <div class="code-block">${pkg.install}</div>
+                    <div class="package-actions">
+                        <a href="https://www.npmjs.com/package/${pkg.name}" target="_blank" class="btn btn-primary">View on npm</a>
+                        <button class="btn btn-secondary" onclick="showExample('${pkg.name}', \`${pkg.example.replace(/`/g, '\\`')}\`)">Example</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterPackages() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const activeCategory = document.querySelector('.category-btn.active')?.dataset.category || 'all';
+            
+            let filtered = packages.filter(pkg => {
+                const matchesSearch = !searchTerm || 
+                    pkg.name.toLowerCase().includes(searchTerm) ||
+                    pkg.description.toLowerCase().includes(searchTerm) ||
+                    pkg.keywords.some(k => k.toLowerCase().includes(searchTerm));
+                
+                const matchesCategory = activeCategory === 'all' || pkg.category === activeCategory;
+                
+                return matchesSearch && matchesCategory;
+            });
+            
+            renderPackages(filtered);
+        }
+
+        function showExample(name, code) {
+            alert(`${name}\n\nExample:\n${code}`);
+        }
+
+        // Event listeners
+        document.getElementById('searchBox').addEventListener('input', filterPackages);
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterPackages();
+            });
+        });
+
+        // Initial render
+        renderPackages(packages);
+    </script>
+</body>
+</html>
+
