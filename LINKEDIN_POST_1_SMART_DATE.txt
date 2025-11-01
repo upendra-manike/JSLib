@@ -1,0 +1,27 @@
+🚀 Introducing @upendra.manike/smart-date - A human-friendly date library for modern web apps!
+
+Tired of showing raw timestamps like "2024-01-15T10:30:00Z"? Smart Date converts them into natural, human-readable formats:
+
+✨ Features:
+• "2h ago" instead of timestamps
+• "yesterday", "tomorrow", "next Monday"
+• Flexible absolute date formatting
+• Locale support for internationalization
+• Full TypeScript support
+
+Perfect for:
+✅ Social media apps
+✅ Activity feeds
+✅ Dashboard timestamps
+✅ User notifications
+
+```bash
+npm install @upendra.manike/smart-date
+```
+
+Check it out: https://www.npmjs.com/package/@upendra.manike/smart-date
+
+Open source (MIT). Feedback welcome! 🙏
+
+#JavaScript #TypeScript #WebDevelopment #FrontendDevelopment #NPM #OpenSource
+

@@ -1,0 +1,31 @@
+⚡ Introducing @upendra.manike/lite-fetcher - Modern API client with built-in caching!
+
+A lightweight fetch wrapper that handles caching, retries, and timeouts out of the box.
+
+✨ Features:
+• Built-in caching (localStorage, sessionStorage, memory)
+• TTL (Time To Live) support
+• Auto-retry on failures
+• Request timeout handling
+• Works in browser & Node.js
+• Zero dependencies
+
+Perfect for:
+✅ RESTful API calls
+✅ Data fetching with caching
+✅ Reducing API load
+✅ Offline-first apps
+✅ Performance optimization
+
+```typescript
+const data = await api.get('/users', { 
+  cache: { ttl: 60000 } // Cache for 1 minute
+});
+```
+
+Check it out: https://www.npmjs.com/package/@upendra.manike/lite-fetcher
+
+Open source (MIT). Try it out! 🚀
+
+#JavaScript #TypeScript #WebDevelopment #API #Caching #NPM #OpenSource #Performance
+

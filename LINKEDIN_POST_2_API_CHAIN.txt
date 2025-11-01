@@ -1,0 +1,31 @@
+🔗 Just published @upendra.manike/api-chain - Declarative API chaining made simple!
+
+Create clean, sequential API workflows without callback hell or complex async/await chains.
+
+✨ What it does:
+• Chain API calls sequentially
+• Built-in error handling with hooks
+• Step completion tracking
+• Type-safe workflows
+• Continue on error option
+
+Perfect for:
+✅ Loading dashboard data
+✅ Multi-step API workflows
+✅ Data dependency chains
+✅ Complex API integrations
+
+```typescript
+const result = await chain(
+  getUser,
+  getPosts,
+  getComments
+).run();
+```
+
+Check it out: https://www.npmjs.com/package/@upendra.manike/api-chain
+
+Open source (MIT). Let me know what you think! 💭
+
+#JavaScript #TypeScript #WebDevelopment #API #NPM #OpenSource #BackendDevelopment
+

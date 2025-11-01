@@ -1,0 +1,28 @@
+🪄 Meet @upendra.manike/tiny-utils - Your modern Lodash replacement!
+
+Ultra-lightweight utility library using native ES6+ methods. Import only what you need, tree-shake the rest.
+
+✨ What's inside:
+• Array utilities: chunk, uniq, groupBy, flatten
+• Object utilities: omit, pick, merge, get, set
+• Function utilities: debounce, throttle, memoize
+• String utilities: camelCase, kebabCase, capitalize
+• Type guards: isDefined, isNil, isObject
+
+Why choose this?
+✅ Zero dependencies
+✅ Tree-shakable
+✅ TypeScript-first
+✅ Modern ES6+ patterns
+✅ Smaller bundle size than Lodash
+
+```bash
+npm install @upendra.manike/tiny-utils
+```
+
+Check it out: https://www.npmjs.com/package/@upendra.manike/tiny-utils
+
+Perfect for projects where bundle size matters! 📦
+
+#JavaScript #TypeScript #WebDevelopment #Lodash #NPM #OpenSource #Performance
+

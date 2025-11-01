@@ -1,0 +1,36 @@
+🚀 Excited to announce the release of 5 modern JavaScript/TypeScript libraries I've been working on! All are now available on npm and ready for production use.
+
+📦 The Packages:
+
+1️⃣ @upendra.manike/smart-date
+A human-friendly date library that converts timestamps into natural language like "2h ago", "yesterday", "next Monday". Perfect for social apps and dashboards.
+npm: https://www.npmjs.com/package/@upendra.manike/smart-date
+
+2️⃣ @upendra.manike/api-chain
+Declarative API chaining library for creating clean, sequential API workflows. Chain your API calls with built-in error handling and hooks.
+npm: https://www.npmjs.com/package/@upendra.manike/api-chain
+
+3️⃣ @upendra.manike/tiny-utils
+Ultra-lightweight utility library - a modern replacement for Lodash using ES6+ native methods. Tree-shakable, type-safe, and production-ready.
+npm: https://www.npmjs.com/package/@upendra.manike/tiny-utils
+
+4️⃣ @upendra.manike/lite-fetcher
+Modern API client with built-in caching (localStorage, sessionStorage, memory). Features TTL support, auto-retry, and timeout handling. Works in browser & Node.js.
+npm: https://www.npmjs.com/package/@upendra.manike/lite-fetcher
+
+5️⃣ @upendra.manike/react-motion-kit
+Prebuilt animation hooks for React built on Framer Motion. Plug-and-play animations for buttons, modals, and more. Fully customizable and production-tested.
+npm: https://www.npmjs.com/package/@upendra.manike/react-motion-kit
+
+✨ Why I built these:
+• Modern ES6+ patterns
+• Full TypeScript support
+• Zero dependencies (except peer deps)
+• Tree-shakable
+• Well-tested
+• Production-ready
+
+All packages are open source (MIT) and available on npm. Would love to hear your feedback!
+
+#JavaScript #TypeScript #OpenSource #NPM #React #WebDevelopment #FrontendDevelopment #SoftwareDevelopment #DeveloperTools #Coding
+

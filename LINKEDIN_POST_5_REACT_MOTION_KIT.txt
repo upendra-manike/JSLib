@@ -1,0 +1,33 @@
+🎭 Just launched @upendra.manike/react-motion-kit - Prebuilt animation hooks for React!
+
+Stop writing the same animation code over and over. Use production-ready hooks built on Framer Motion.
+
+✨ What's included:
+• Animation hooks: fadeIn, slideIn, bounce, shake, pulse, rotate, scale
+• Pre-built components: AnimatedButton, AnimatedModal
+• Hover effects
+• Fully customizable
+• TypeScript support
+
+Perfect for:
+✅ Landing pages
+✅ Dashboards
+✅ Interactive UIs
+✅ Marketing sites
+✅ Prototyping
+
+```typescript
+import { useFadeIn } from '@upendra.manike/react-motion-kit';
+
+const fade = useFadeIn({ duration: 0.5 });
+<motion.div {...fade}>Content</motion.div>
+```
+
+Check it out: https://www.npmjs.com/package/@upendra.manike/react-motion-kit
+
+Requires: framer-motion
+
+Open source (MIT). Let me know your feedback! 💬
+
+#React #JavaScript #TypeScript #Animation #WebDevelopment #NPM #OpenSource #FramerMotion #FrontendDevelopment
+
