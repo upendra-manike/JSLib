@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/commit-gen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Natural Language to Conventional Commit - CLI tool to generate conventional commit messages automatically. Convert plain English to semantic commit format. Perfect for Git workflows and CI/CD pipelines.",
   "main": "./dist/index.js",
   "bin": {
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup && chmod +x dist/cli.js && echo '#!/usr/bin/env node' | cat - dist/cli.js > dist/cli.js.tmp && mv dist/cli.js.tmp dist/cli.js",
+    "build": "tsup && chmod +x dist/cli.js",
     "dev": "tsup --watch",
     "test": "vitest",
     "lint": "eslint src --ext .ts",
