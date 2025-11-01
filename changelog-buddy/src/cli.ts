@@ -4,8 +4,6 @@ import { generateChangelog } from './changelog-buddy';
 import { readFileSync, writeFileSync } from 'fs';
 import { execSync } from 'child_process';
 
-declare const process: any;
-
 function getGitCommits(since?: string): string[] {
   try {
     const command = since 
