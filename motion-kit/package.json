@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/motion-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Framework-agnostic animation library - Modern animation components that work with React, Vue, Svelte, and vanilla JS",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,4 +36,3 @@
     "vitest": "^1.0.4"
   }
 }
-

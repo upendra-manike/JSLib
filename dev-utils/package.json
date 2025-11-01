@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/dev-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Developer utilities - logging, timing, query string parser, pub-sub event emitter",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

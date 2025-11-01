@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/fetch-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Next-gen Fetch Wrapper - Lightweight, modern replacement for Axios with retry, timeout, cancel, interceptors, and caching",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -47,4 +47,3 @@
     "vitest": "^1.0.4"
   }
 }
-

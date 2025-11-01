@@ -24,14 +24,14 @@ export function deepMerge<T extends Record<string, any>>(
   target: T,
   source: Partial<T>
 ): T {
-  const output = { ...target };
+  const output = { ...target } as any;
   if (isObject(target) && isObject(source)) {
     Object.keys(source).forEach((key) => {
       if (isObject(source[key])) {
         if (!(key in target)) {
           Object.assign(output, { [key]: source[key] });
         } else {
-          output[key] = deepMerge(target[key], source[key]);
+          output[key] = deepMerge(target[key] as any, source[key] as any);
         }
       } else {
         Object.assign(output, { [key]: source[key] });
@@ -48,14 +48,14 @@ export function deepPick<T extends Record<string, any>>(
   obj: T,
   keys: string[]
 ): Partial<T> {
-  const result: Partial<T> = {};
+  const result: any = {};
   keys.forEach((key) => {
     if (key in obj) {
       const value = obj[key];
       if (isObject(value) && !Array.isArray(value)) {
         const nestedKeys = keys.filter((k) => k.startsWith(`${key}.`)).map((k) => k.substring(key.length + 1));
         if (nestedKeys.length > 0) {
-          result[key] = deepPick(value, nestedKeys) as any;
+          result[key] = deepPick(value, nestedKeys);
         } else {
           result[key] = value;
         }
@@ -64,7 +64,7 @@ export function deepPick<T extends Record<string, any>>(
       }
     }
   });
-  return result;
+  return result as Partial<T>;
 }
 
 /**
@@ -74,18 +74,18 @@ export function deepOmit<T extends Record<string, any>>(
   obj: T,
   keys: string[]
 ): Partial<T> {
-  const result = { ...obj };
+  const result = { ...obj } as any;
   keys.forEach((key) => {
     if (key.includes('.')) {
       const [firstKey, ...rest] = key.split('.');
       if (firstKey in result && isObject(result[firstKey])) {
-        (result[firstKey] as any) = deepOmit(result[firstKey], [rest.join('.')]);
+        result[firstKey] = deepOmit(result[firstKey] as any, [rest.join('.')]);
       }
     } else {
       delete result[key];
     }
   });
-  return result;
+  return result as Partial<T>;
 }
 
 /**

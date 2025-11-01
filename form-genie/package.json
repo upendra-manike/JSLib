@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/form-genie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schema to Form generator - Build React forms from JSON schema or Zod validation automatically",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -52,4 +52,3 @@
     "vitest": "^1.0.4"
   }
 }
-

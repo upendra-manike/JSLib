@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/string-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "String manipulation utilities - camelCase, slugify, truncate, CSV conversion, and more",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

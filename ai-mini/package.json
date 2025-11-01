@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/ai-mini",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Universal LLM Client - Unified API for OpenAI, Gemini, Claude, Groq and more",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -38,4 +38,3 @@
     "vitest": "^1.0.4"
   }
 }
-

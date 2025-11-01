@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-skeletons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auto Placeholder Generator - Auto-generate skeleton loading states from existing DOM or component structure",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -50,4 +50,3 @@
     "vitest": "^1.0.4"
   }
 }
-

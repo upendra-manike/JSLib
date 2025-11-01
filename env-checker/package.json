@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/env-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Environment Variable Validator - Validate env vars against schema at startup",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,4 +36,3 @@
     "vitest": "^1.0.4"
   }
 }
-

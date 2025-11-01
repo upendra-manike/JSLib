@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/dom-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DOM and browser utilities - clipboard, viewport detection, smooth scroll, debounce/throttle",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

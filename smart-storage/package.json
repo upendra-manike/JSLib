@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/smart-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unified storage API - LocalStorage + Session + IndexedDB with TTL support for Browser, Node, and React Native",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/cacheable-fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Offline-first API Layer - Wrap fetch with automatic localStorage/IndexedDB caching, TTL, and background refresh",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

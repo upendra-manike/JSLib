@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/array-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Array manipulation utilities - group by, aggregate, statistics, remove duplicates, and more",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

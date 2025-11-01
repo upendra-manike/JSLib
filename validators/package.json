@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/validators",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validation utilities - email, URL, phone, empty checks, type checks, and runtime detection",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,4 +36,3 @@
     "vitest": "^1.0.4"
   }
 }
-

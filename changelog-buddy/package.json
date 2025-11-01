@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/changelog-buddy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auto Changelog Generator - Reads commits and generates markdown changelog with emojis + semver bump",
   "main": "./dist/index.js",
   "bin": {
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/object-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Object manipulation utilities - deep clone, deep merge, pick/omit, flatten nested objects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,4 +37,3 @@
     "vitest": "^1.0.4"
   }
 }
-

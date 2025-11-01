@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/id-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Secure ID generation - UUID, GUID, short unique strings, hash, and mask utilities",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,4 +36,3 @@
     "vitest": "^1.0.4"
   }
 }
-

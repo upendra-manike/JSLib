@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/tiny-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ultra-lightweight modern JS utilities - Replace Lodash with ES6+ native methods",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -50,4 +50,3 @@
     "vitest": "^1.0.4"
   }
 }
-
