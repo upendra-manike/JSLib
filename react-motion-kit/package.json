@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-motion-kit",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Prebuilt animation hooks for React - Plug-and-play Framer Motion-based animations",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

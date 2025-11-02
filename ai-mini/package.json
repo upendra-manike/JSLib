@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/ai-mini",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Universal LLM Client for JavaScript/TypeScript - Unified API for OpenAI, Gemini, Claude, Groq and more. One interface for all AI providers. Perfect for AI applications, chatbots, and LLM integrations. Switch between AI providers seamlessly.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

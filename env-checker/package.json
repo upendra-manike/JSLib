@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/env-checker",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Environment Variable Validator for JavaScript/TypeScript - Validate env vars against schema at startup. Prevent app crashes from missing configuration. Perfect for Node.js, React, Next.js, and all JavaScript applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/object-helpers",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Object manipulation utilities for JavaScript/TypeScript - deep clone, deep merge, pick/omit, flatten nested objects. Comprehensive object operations with immutable patterns. Perfect for data transformation and manipulation.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

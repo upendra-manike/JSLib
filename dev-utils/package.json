@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/dev-utils",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Developer utilities for JavaScript/TypeScript - logging with timestamps, execution time measurement, query string parser, and pub-sub event emitter. Essential tools for development and debugging.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

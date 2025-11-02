@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/form-genie",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Schema to Form generator for React - Build forms from JSON schema or Zod validation automatically. Eliminate repetitive form code. Auto-validation, conditional fields, and custom rendering. Perfect for admin panels, dashboards, and data entry forms. Best React form generator.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

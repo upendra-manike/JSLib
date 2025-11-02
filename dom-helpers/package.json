@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/dom-helpers",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "DOM and browser utilities for JavaScript/TypeScript - clipboard, viewport detection, smooth scroll, debounce/throttle. Essential browser utilities for modern web development. Perfect for performance optimization.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

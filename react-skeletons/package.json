@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-skeletons",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Auto Placeholder Generator for React - Auto-generate skeleton loading states from existing DOM or component structure. Improve UX with beautiful loading states. Perfect for React applications and dashboards.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

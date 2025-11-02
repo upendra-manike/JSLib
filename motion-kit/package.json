@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/motion-kit",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Framework-agnostic animation library - Modern animation components that work with React, Vue, Svelte, and vanilla JS. Prebuilt animations: fade, slide, scale, bounce. Use with any framework or vanilla JavaScript. Lightweight and performant animation library.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

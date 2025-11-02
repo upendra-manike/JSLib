@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/smart-storage",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Unified storage API for JavaScript/TypeScript - LocalStorage + SessionStorage + IndexedDB with TTL support for Browser, Node, and React Native. One API for all storage types with automatic expiration. Perfect for caching and data persistence.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
