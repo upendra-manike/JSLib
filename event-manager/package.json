@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/event-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safe event listener management with disposers and groups to prevent memory leaks.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -45,4 +47,3 @@
     "vitest": "^1.0.4"
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/deep-access",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safe deep get/set with dotted paths and default values.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -46,4 +48,3 @@
     "vitest": "^1.0.4"
   }
 }
-

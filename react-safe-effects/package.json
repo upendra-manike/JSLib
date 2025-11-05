@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-safe-effects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hooks to avoid common pitfalls: safe async effects, stable callbacks, and cleanup.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -50,4 +52,3 @@
     "vitest": "^1.0.4"
   }
 }
-
