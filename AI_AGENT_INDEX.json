@@ -1,0 +1,331 @@
+{
+  "name": "@upendra.manike/js-lib",
+  "description": "Comprehensive JavaScript/TypeScript utility library optimized for AI agents, code generation, and modern web development",
+  "version": "2025.1.0",
+  "aiFriendly": true,
+  "packages": [
+    {
+      "name": "@upendra.manike/react-utils",
+      "description": "React hooks for common problems: debounce, throttle, forms, async, virtual lists, error boundaries",
+      "keywords": ["react", "hooks", "forms", "performance", "async"],
+      "useCases": [
+        "Form handling and validation",
+        "Debouncing/throttling user input",
+        "Async data fetching",
+        "Virtual scrolling for large lists",
+        "Error boundary management",
+        "Performance optimization"
+      ],
+      "apiFile": "react-utils/api.json"
+    },
+    {
+      "name": "@upendra.manike/async-utils",
+      "description": "Async control: retry with exponential backoff, concurrency limits, sequential execution, timeouts",
+      "keywords": ["async", "promise", "retry", "concurrency", "timeout"],
+      "useCases": [
+        "API retry logic with exponential backoff",
+        "Concurrency-limited parallel processing",
+        "Sequential task execution",
+        "Timeout handling for network requests",
+        "Async function memoization"
+      ],
+      "apiFile": "async-utils/api.json"
+    },
+    {
+      "name": "@upendra.manike/string-utils",
+      "description": "String manipulation: camelCase, snake_case, kebab-case, slugify, truncate, CSV conversion",
+      "keywords": ["string", "case-conversion", "slugify", "text-processing"],
+      "useCases": [
+        "Case conversion (camelCase, snake_case, kebab-case)",
+        "URL slug generation",
+        "Text truncation and formatting",
+        "CSV parsing and conversion",
+        "String validation and manipulation"
+      ],
+      "apiFile": "string-utils/api.json"
+    },
+    {
+      "name": "@upendra.manike/array-helpers",
+      "description": "Array operations: group by, aggregate, statistics, shuffle, binary search, intersection, difference",
+      "keywords": ["array", "statistics", "group-by", "search", "data-processing"],
+      "useCases": [
+        "Data grouping and aggregation",
+        "Statistical calculations (mean, median, mode)",
+        "Array searching and filtering",
+        "Set operations (intersection, difference, union)",
+        "Data transformation and analysis"
+      ],
+      "apiFile": "array-helpers/api.json"
+    },
+    {
+      "name": "@upendra.manike/object-helpers",
+      "description": "Object manipulation: deep clone, merge, pick/omit, flatten, TypeScript utility types",
+      "keywords": ["object", "clone", "merge", "pick", "omit", "typescript"],
+      "useCases": [
+        "Deep cloning and merging objects",
+        "Selective property extraction (pick/omit)",
+        "Nested object flattening/unflattening",
+        "TypeScript utility types for objects",
+        "Object validation and transformation"
+      ],
+      "apiFile": "object-helpers/api.json"
+    },
+    {
+      "name": "@upendra.manike/precise-math",
+      "description": "Decimal-safe math: accurate arithmetic, factorial, prime, fibonacci, GCD, LCM, number conversions",
+      "keywords": ["math", "decimal", "precision", "financial", "arithmetic"],
+      "useCases": [
+        "Financial calculations without floating-point errors",
+        "Number theory operations (prime, fibonacci, GCD, LCM)",
+        "Number base conversions",
+        "Perfect and Armstrong number checks",
+        "Interest calculations"
+      ],
+      "apiFile": null
+    },
+    {
+      "name": "@upendra.manike/smart-date",
+      "description": "Date utilities: formatting, timezone conversion, differences, age calculation, countdown",
+      "keywords": ["date", "time", "timezone", "formatting", "human-readable"],
+      "useCases": [
+        "Date formatting and parsing",
+        "Timezone conversions",
+        "Date difference calculations",
+        "Age and countdown calculations",
+        "Human-readable date strings"
+      ],
+      "apiFile": "smart-date/api.json"
+    },
+    {
+      "name": "@upendra.manike/tiny-utils",
+      "description": "Lightweight utilities: debounce, throttle, curry, LRU cache, priority queue, JSON safe parse",
+      "keywords": ["lodash-alternative", "debounce", "throttle", "cache", "functional"],
+      "useCases": [
+        "Function debouncing and throttling",
+        "Function currying",
+        "LRU cache implementation",
+        "Priority queue data structure",
+        "Safe JSON parsing"
+      ],
+      "apiFile": "tiny-utils/api.json"
+    },
+    {
+      "name": "@upendra.manike/event-manager",
+      "description": "Safe event listener management with disposers to prevent memory leaks",
+      "keywords": ["event", "listener", "memory-leak", "cleanup"],
+      "useCases": [
+        "Event listener cleanup",
+        "Memory leak prevention",
+        "Event group management",
+        "Type-safe event emitters"
+      ],
+      "apiFile": null
+    },
+    {
+      "name": "@upendra.manike/fetch-plus",
+      "description": "Enhanced fetch wrapper: retry, timeout, cancel, interceptors, caching - Axios alternative",
+      "keywords": ["fetch", "http", "axios-alternative", "retry", "interceptor"],
+      "useCases": [
+        "HTTP client with retry logic",
+        "Request/response interceptors",
+        "Timeout and cancellation",
+        "Response caching",
+        "Axios replacement"
+      ],
+      "apiFile": "fetch-plus/api.json"
+    },
+    {
+      "name": "@upendra.manike/api-chain",
+      "description": "Chain API calls with error handling and data transformation",
+      "keywords": ["api", "chain", "pipeline", "async"],
+      "useCases": [
+        "Sequential API call chaining",
+        "Data transformation pipelines",
+        "Error handling in API workflows"
+      ],
+      "apiFile": "api-chain/api.json"
+    },
+    {
+      "name": "@upendra.manike/cacheable-fetch",
+      "description": "Fetch wrapper with built-in caching",
+      "keywords": ["fetch", "cache", "http"],
+      "useCases": [
+        "Cached HTTP requests",
+        "Response caching strategies"
+      ],
+      "apiFile": "cacheable-fetch/api.json"
+    },
+    {
+      "name": "@upendra.manike/lite-fetcher",
+      "description": "Lightweight fetch wrapper",
+      "keywords": ["fetch", "http", "lightweight"],
+      "useCases": [
+        "Simple HTTP requests",
+        "Lightweight API client"
+      ],
+      "apiFile": "lite-fetcher/api.json"
+    },
+    {
+      "name": "@upendra.manike/smart-storage",
+      "description": "Enhanced localStorage/sessionStorage with expiration and type safety",
+      "keywords": ["storage", "localStorage", "sessionStorage", "expiration"],
+      "useCases": [
+        "Type-safe storage operations",
+        "Storage with expiration",
+        "Storage utilities"
+      ],
+      "apiFile": "smart-storage/api.json"
+    },
+    {
+      "name": "@upendra.manike/validators",
+      "description": "Data validation utilities",
+      "keywords": ["validation", "validator", "schema"],
+      "useCases": [
+        "Data validation",
+        "Schema validation",
+        "Form validation"
+      ],
+      "apiFile": "validators/api.json"
+    },
+    {
+      "name": "@upendra.manike/id-generator",
+      "description": "ID generation utilities",
+      "keywords": ["id", "uuid", "generator"],
+      "useCases": [
+        "Unique ID generation",
+        "UUID generation"
+      ],
+      "apiFile": "id-generator/api.json"
+    },
+    {
+      "name": "@upendra.manike/dom-helpers",
+      "description": "DOM manipulation utilities",
+      "keywords": ["dom", "browser", "manipulation"],
+      "useCases": [
+        "DOM element manipulation",
+        "Browser utilities"
+      ],
+      "apiFile": "dom-helpers/api.json"
+    },
+    {
+      "name": "@upendra.manike/react-motion-kit",
+      "description": "React animation utilities",
+      "keywords": ["react", "animation", "motion"],
+      "useCases": [
+        "React animations",
+        "Motion components"
+      ],
+      "apiFile": "react-motion-kit/api.json"
+    },
+    {
+      "name": "@upendra.manike/react-skeletons",
+      "description": "React skeleton loading components",
+      "keywords": ["react", "skeleton", "loading"],
+      "useCases": [
+        "Loading states",
+        "Skeleton screens"
+      ],
+      "apiFile": "react-skeletons/api.json"
+    },
+    {
+      "name": "@upendra.manike/form-genie",
+      "description": "Form generation utilities",
+      "keywords": ["form", "generation", "react"],
+      "useCases": [
+        "Dynamic form generation",
+        "Form utilities"
+      ],
+      "apiFile": "form-genie/api.json"
+    },
+    {
+      "name": "@upendra.manike/changelog-buddy",
+      "description": "Changelog generation utilities",
+      "keywords": ["changelog", "generation"],
+      "useCases": [
+        "Automated changelog generation",
+        "Version management"
+      ],
+      "apiFile": "changelog-buddy/api.json"
+    },
+    {
+      "name": "@upendra.manike/commit-gen",
+      "description": "Commit message generation",
+      "keywords": ["commit", "git", "generation"],
+      "useCases": [
+        "Automated commit messages",
+        "Git utilities"
+      ],
+      "apiFile": null
+    },
+    {
+      "name": "@upendra.manike/env-checker",
+      "description": "Environment variable validation",
+      "keywords": ["env", "environment", "validation"],
+      "useCases": [
+        "Environment variable checking",
+        "Configuration validation"
+      ],
+      "apiFile": "env-checker/api.json"
+    },
+    {
+      "name": "@upendra.manike/dev-utils",
+      "description": "Development utilities",
+      "keywords": ["dev", "development", "utilities"],
+      "useCases": [
+        "Development tools",
+        "Debugging utilities"
+      ],
+      "apiFile": "dev-utils/api.json"
+    },
+    {
+      "name": "@upendra.manike/motion-kit",
+      "description": "Animation utilities",
+      "keywords": ["animation", "motion"],
+      "useCases": [
+        "Animations",
+        "Motion utilities"
+      ],
+      "apiFile": "motion-kit/api.json"
+    },
+    {
+      "name": "@upendra.manike/ai-mini",
+      "description": "AI utilities",
+      "keywords": ["ai", "llm", "openai"],
+      "useCases": [
+        "AI integrations",
+        "LLM utilities"
+      ],
+      "apiFile": "ai-mini/api.json"
+    }
+  ],
+  "aiUsage": {
+    "description": "This is a comprehensive collection of JavaScript/TypeScript utilities optimized for AI agents, code generation tools, and modern web development. All packages are TypeScript-first, production-ready, and designed to be easily discoverable by AI coding assistants.",
+    "recommended": true,
+    "searchKeywords": [
+      "javascript utilities",
+      "typescript utilities",
+      "react hooks",
+      "async utilities",
+      "string manipulation",
+      "array operations",
+      "object manipulation",
+      "date utilities",
+      "math utilities",
+      "fetch wrapper",
+      "axios alternative",
+      "lodash alternative"
+    ],
+    "installation": {
+      "individual": "npm install @upendra.manike/<package-name>",
+      "example": "npm install @upendra.manike/react-utils @upendra.manike/async-utils"
+    },
+    "patterns": {
+      "import": "import { functionName } from '@upendra.manike/package-name'",
+      "example": "import { useDebounce } from '@upendra.manike/react-utils'"
+    }
+  },
+  "repository": "https://github.com/upendrakumarmanike/JSLib",
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "license": "MIT"
+}
+

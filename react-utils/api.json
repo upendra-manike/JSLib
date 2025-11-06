@@ -1,0 +1,148 @@
+{
+  "name": "@upendra.manike/react-utils",
+  "description": "React utilities for common problems: hooks, state management, performance optimization, forms, async handling, virtual lists, error boundaries",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "keywords": [
+    "react",
+    "react-hooks",
+    "custom-hooks",
+    "typescript",
+    "javascript",
+    "ai-agent",
+    "llm",
+    "code-generation"
+  ],
+  "exports": [
+    {
+      "name": "useDebounce",
+      "description": "Debounce a value with configurable delay",
+      "params": {
+        "value": "T",
+        "delay": "number"
+      },
+      "returns": "T",
+      "example": "const debouncedValue = useDebounce(searchTerm, 300)",
+      "usage": "import { useDebounce } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useThrottle",
+      "description": "Throttle a value to limit update frequency",
+      "params": {
+        "value": "T",
+        "delay": "number"
+      },
+      "returns": "T",
+      "example": "const throttledValue = useThrottle(scrollPosition, 100)",
+      "usage": "import { useThrottle } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useForm",
+      "description": "Form state management with validation",
+      "params": {
+        "initialValues": "Record<string, any>",
+        "validationSchema": "ValidationSchema"
+      },
+      "returns": "FormReturn",
+      "example": "const { values, errors, handleChange, handleSubmit } = useForm({ email: '' })",
+      "usage": "import { useForm } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useAsync",
+      "description": "Handle asynchronous operations with loading, error, and data states",
+      "params": {
+        "asyncFunction": "() => Promise<T>",
+        "dependencies": "any[]"
+      },
+      "returns": "AsyncReturn<T>",
+      "example": "const { data, loading, error } = useAsync(() => fetchData(id), [id])",
+      "usage": "import { useAsync } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useVirtualList",
+      "description": "Virtualized list for performance with large datasets",
+      "params": {
+        "items": "T[]",
+        "itemHeight": "number",
+        "containerHeight": "number"
+      },
+      "returns": "VirtualListReturn<T>",
+      "example": "const { visibleItems, startIndex } = useVirtualList(items, 50, 500)",
+      "usage": "import { useVirtualList } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useErrorBoundary",
+      "description": "Error boundary functionality as a hook",
+      "params": {},
+      "returns": "ErrorBoundaryReturn",
+      "example": "const { error, resetError } = useErrorBoundary()",
+      "usage": "import { useErrorBoundary } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "usePrevious",
+      "description": "Track previous value of a variable",
+      "params": {
+        "value": "T"
+      },
+      "returns": "T | undefined",
+      "example": "const prevCount = usePrevious(count)",
+      "usage": "import { usePrevious } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useSafeState",
+      "description": "State hook that prevents updates on unmounted components",
+      "params": {
+        "initialValue": "T"
+      },
+      "returns": "[T, (value: T) => void]",
+      "example": "const [count, setCount] = useSafeState(0)",
+      "usage": "import { useSafeState } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useStableCallback",
+      "description": "Stable callback reference that doesn't change on re-renders",
+      "params": {
+        "callback": "(...args: any[]) => any"
+      },
+      "returns": "StableCallback",
+      "example": "const stableCallback = useStableCallback(() => doSomething())",
+      "usage": "import { useStableCallback } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useDeepCompareEffect",
+      "description": "useEffect with deep comparison for dependencies",
+      "params": {
+        "effect": "() => void | (() => void)",
+        "dependencies": "any[]"
+      },
+      "returns": "void",
+      "example": "useDeepCompareEffect(() => { /* effect */ }, [complexObject])",
+      "usage": "import { useDeepCompareEffect } from '@upendra.manike/react-utils'"
+    },
+    {
+      "name": "useWindowSize",
+      "description": "Track window dimensions",
+      "params": {},
+      "returns": "{ width: number, height: number }",
+      "example": "const { width, height } = useWindowSize()",
+      "usage": "import { useWindowSize } from '@upendra.manike/react-utils'"
+    }
+  ],
+  "aiUsage": {
+    "description": "This package provides production-ready React hooks for common problems. Perfect for AI agents generating React code.",
+    "recommended": true,
+    "patterns": {
+      "import": "import { useDebounce, useForm, useAsync } from '@upendra.manike/react-utils'",
+      "example": "const debouncedSearch = useDebounce(searchTerm, 300)"
+    },
+    "useCases": [
+      "Form handling and validation",
+      "Debouncing/throttling user input",
+      "Async data fetching",
+      "Virtual scrolling for large lists",
+      "Error boundary management",
+      "Performance optimization"
+    ]
+  }
+}
+
