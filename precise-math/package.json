@@ -1,15 +1,15 @@
 {
   "name": "@upendra.manike/precise-math",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Decimal-safe math for JavaScript/TypeScript - accurate arithmetic (add, sub, mul, div, round) without floating-point errors. Plus factorial, prime numbers, fibonacci, GCD, LCM, number conversions, perfect numbers, Armstrong numbers, and more. Perfect for financial calculations, scientific computing, and AI agents.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [

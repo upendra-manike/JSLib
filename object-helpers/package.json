@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/object-helpers",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Object manipulation utilities for JavaScript/TypeScript - deep clone, deep merge, pick/omit, flatten/unflatten, deep equal, shallow clone, map conversion, query string, validation, and more. Comprehensive object operations with immutable patterns, TypeScript utility types (DeepPartial, DeepPick, etc.), and production-ready functions. Perfect for data transformation, API responses, configuration management, and AI agents.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

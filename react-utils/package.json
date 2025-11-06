@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React utilities for common problems: hooks, state management, performance optimization, forms, async handling, virtual lists, error boundaries. Solve 50+ React problems with production-ready hooks. Perfect for React 16.8+, Next.js, and modern web apps. AI-friendly and TypeScript-first.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -112,4 +112,3 @@
   },
   "dependencies": {}
 }
-

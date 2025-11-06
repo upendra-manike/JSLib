@@ -1,15 +1,15 @@
 {
   "name": "@upendra.manike/async-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Async control utilities for JavaScript/TypeScript: retry with exponential backoff, concurrency-limited queues, promise pools, sequential execution, timeout handling, abort signals. Perfect for API calls, data fetching, and async operations. AI-friendly and production-ready.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [
