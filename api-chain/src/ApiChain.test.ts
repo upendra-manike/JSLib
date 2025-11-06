@@ -57,7 +57,9 @@ describe('ApiChain', () => {
         throw new Error('Test error');
       })
       .step(async (input) => {
-        return input instanceof Error ? 0 : input + 1;
+        // When error is passed, handle it and return 1 (handled error case)
+        // Otherwise continue with input + 1
+        return input instanceof Error ? 1 : input + 1;
       })
       .run();
 

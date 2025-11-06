@@ -320,3 +320,17 @@ export class FetchPlus {
   }
 }
 
+/**
+ * Simple cancellable fetch wrapper using AbortController
+ */
+export function cancellableFetch(input: RequestInfo | URL, init: RequestInit & { timeoutMs?: number } = {}) {
+  const controller = new AbortController();
+  const timeout = init.timeoutMs ? setTimeout(() => controller.abort(), init.timeoutMs) : null;
+  const signal = init.signal
+    ? new FetchPlus({}).['mergeSignals'](controller.signal, init.signal as any)
+    : controller.signal;
+  const promise = fetch(input, { ...init, signal }).finally(() => {
+    if (timeout) clearTimeout(timeout);
+  });
+  return { promise, cancel: () => controller.abort() } as const;
+}

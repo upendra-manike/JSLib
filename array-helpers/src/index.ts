@@ -10,5 +10,18 @@ export {
   sum,
   max,
   min,
+  shuffle,
+  isSorted,
+  rotate,
+  secondLargest,
+  splitEvenOdd,
+  sortByProperty,
+  findDuplicates,
+  removeDuplicatesByKey,
+  stringsToNumbers,
+  commonElements,
+  missingNumber,
+  binarySearch,
+  linearSearch,
 } from './array-helpers';
 

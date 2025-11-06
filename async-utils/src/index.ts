@@ -70,6 +70,113 @@ export async function pMapSeries<I, O>(items: readonly I[], mapper: (item: I, in
   return out;
 }
 
-export const asyncUtils = { sleep, backoffDelay, withRetry, pMapSeries };
+export function timeoutPromise<T>(promise: Promise<T>, ms: number, message = 'Timed out'): Promise<T> {
+  let timer: ReturnType<typeof setTimeout>;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new Error(message)), ms);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer!)) as Promise<T>;
+}
+
+export async function pQueue<T>(tasks: Array<() => Promise<T>>): Promise<T[]> {
+  const results: T[] = [];
+  for (const task of tasks) {
+    // eslint-disable-next-line no-await-in-loop
+    results.push(await task());
+  }
+  return results;
+}
+
+export async function pMapLimit<I, O>(
+  items: readonly I[],
+  limit: number,
+  mapper: (item: I, index: number) => Promise<O>
+): Promise<O[]> {
+  if (limit <= 0) return [];
+  const results: O[] = new Array(items.length);
+  let nextIndex = 0;
+  const workers = new Array(Math.min(limit, items.length)).fill(0).map(async () => {
+    while (true) {
+      const current = nextIndex;
+      if (current >= items.length) break;
+      nextIndex += 1;
+      // eslint-disable-next-line no-await-in-loop
+      results[current] = await mapper(items[current], current);
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
+
+export function memoizeAsync<A extends any[], R>(
+  fn: (...args: A) => Promise<R>,
+  keyFn?: (...args: A) => string
+): (...args: A) => Promise<R> {
+  const cache = new Map<string, Promise<R>>();
+  return (...args: A) => {
+    const key = keyFn ? keyFn(...args) : JSON.stringify(args);
+    let cached = cache.get(key);
+    if (!cached) {
+      cached = fn(...args);
+      cache.set(key, cached);
+    }
+    return cached;
+  };
+}
+
+export function promiseRace<T>(promises: Iterable<Promise<T>>): Promise<T> {
+  return Promise.race(promises);
+}
+
+/**
+ * Concurrency-limited task queue
+ */
+export async function concurrencyLimitedQueue<T>(
+  tasks: Array<() => Promise<T>>,
+  concurrency: number
+): Promise<T[]> {
+  if (concurrency <= 0) return [];
+  const results: T[] = new Array(tasks.length);
+  let next = 0;
+  let running = 0;
+  let resolveAll: (() => void) | null = null;
+  const done = new Promise<void>((resolve) => (resolveAll = resolve));
+
+  return new Promise<T[]>((resolve, reject) => {
+    const runNext = () => {
+      if (next >= tasks.length && running === 0) {
+        resolveAll!();
+        return resolve(results);
+      }
+      while (running < concurrency && next < tasks.length) {
+        const current = next++;
+        running += 1;
+        tasks[current]()
+          .then((val) => {
+            results[current] = val;
+          })
+          .catch(reject)
+          .finally(() => {
+            running -= 1;
+            runNext();
+          });
+      }
+    };
+    runNext();
+  });
+}
+
+/**
+ * Promise pool executor (accepts generator of tasks)
+ */
+export async function promisePool<T>(
+  iterator: Iterable<() => Promise<T>>,
+  concurrency: number
+): Promise<T[]> {
+  const tasks = Array.from(iterator);
+  return concurrencyLimitedQueue(tasks, concurrency);
+}
+
+export const asyncUtils = { sleep, backoffDelay, withRetry, pMapSeries, timeoutPromise, pQueue, pMapLimit, memoizeAsync, promiseRace, concurrencyLimitedQueue, promisePool };
 
 
