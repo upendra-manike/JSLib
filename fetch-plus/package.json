@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/fetch-plus",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Next-gen Fetch Wrapper - Lightweight, modern replacement for Axios with retry, timeout, cancel, interceptors, and caching. Zero dependencies, smaller bundle size than Axios, with all the features you need. Best Axios alternative 2025.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

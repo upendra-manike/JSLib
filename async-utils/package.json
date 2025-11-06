@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/async-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Async control utilities: pMapSeries, withRetry (exponential backoff), sleep, timeout, signal-aware",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

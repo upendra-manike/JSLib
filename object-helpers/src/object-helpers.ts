@@ -303,7 +303,7 @@ export function invertObject<T extends string | number, U extends string | numbe
 ): Record<U, T> {
   const inverted: any = {};
   for (const [key, value] of Object.entries(obj)) {
-    inverted[value] = key;
+    inverted[value as U] = key as T;
   }
   return inverted;
 }

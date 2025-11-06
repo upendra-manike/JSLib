@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/array-helpers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Array manipulation utilities for JavaScript/TypeScript - group by, aggregate, statistics (average/median/mode), remove duplicates, and more. Comprehensive array operations for data processing and analysis.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -326,9 +326,17 @@ export class FetchPlus {
 export function cancellableFetch(input: RequestInfo | URL, init: RequestInit & { timeoutMs?: number } = {}) {
   const controller = new AbortController();
   const timeout = init.timeoutMs ? setTimeout(() => controller.abort(), init.timeoutMs) : null;
-  const signal = init.signal
-    ? new FetchPlus({}).['mergeSignals'](controller.signal, init.signal as any)
-    : controller.signal;
+  
+  // Merge signals if both exist
+  let signal: AbortSignal = controller.signal;
+  if (init.signal) {
+    const mergedController = new AbortController();
+    const abort = () => mergedController.abort();
+    controller.signal.addEventListener('abort', abort);
+    init.signal.addEventListener('abort', abort);
+    signal = mergedController.signal;
+  }
+  
   const promise = fetch(input, { ...init, signal }).finally(() => {
     if (timeout) clearTimeout(timeout);
   });

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/string-utils",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "String manipulation utilities for JavaScript/TypeScript - camelCase, snake_case, kebab-case, slugify, truncate, CSV conversion, and more. Comprehensive string utilities for modern web development. Perfect string library for 2025.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

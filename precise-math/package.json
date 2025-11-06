@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/precise-math",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Decimal-safe math for JavaScript. Accurate add, sub, mul, div, round without floating-point errors.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

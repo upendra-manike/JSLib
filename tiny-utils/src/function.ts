@@ -143,7 +143,9 @@ export class LRUCache<K, V> {
     } else if (this.cache.size >= this.capacity) {
       // Remove least recently used (first item)
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
+      if (firstKey !== undefined) {
+        this.cache.delete(firstKey);
+      }
     }
     this.cache.set(key, value);
   }
@@ -198,7 +200,9 @@ export class LRUCacheTTL<K, V> {
       this.cache.delete(key);
     } else if (this.cache.size >= this.capacity) {
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
+      if (firstKey !== undefined) {
+        this.cache.delete(firstKey);
+      }
     }
     this.cache.set(key, { value, expiresAt });
   }

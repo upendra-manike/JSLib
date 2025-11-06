@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/event-manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Safe event listener management with disposers and groups to prevent memory leaks.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
