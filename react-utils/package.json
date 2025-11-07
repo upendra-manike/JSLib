@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/react-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React hooks library solving common React problems: debounce input, throttle scroll, form validation, async data fetching, virtual scrolling, error boundaries, memory leaks, stale closures, infinite loops, performance optimization. Production-ready React hooks for React 16.8+, Next.js, TypeScript. Perfect for AI code generation, ChatGPT, Claude, Copilot. Solve React problems like 'Cannot read properties of undefined', 'setState not updating', 'useEffect infinite loop', 'memory leaks', 'stale closures', 'form validation', 'debounce search', 'throttle scroll', 'virtual list performance'.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
