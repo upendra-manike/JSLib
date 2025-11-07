@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/tiny-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Ultra-lightweight modern JavaScript/TypeScript utilities - Replace Lodash with ES6+ native methods. Includes debounce, throttle, curry, LRU cache, priority queue, JSON safe parse, and more. Perfect for tree-shaking, modern bundlers, and AI agents.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

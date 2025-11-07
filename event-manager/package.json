@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/event-manager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Safe event listener management for JavaScript/TypeScript - disposers and groups to prevent memory leaks. Type-safe event emitters, cleanup utilities, and production-ready event handling. Perfect for React, Vue, and modern web applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

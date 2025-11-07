@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/smart-date",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Human-friendly date library for JavaScript/TypeScript - converts timestamps into natural language, format dates, calculate differences, add/subtract days, timezone conversion, leap year checks, age calculation, countdown, and more. Comprehensive date utilities for modern web development and AI agents.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
