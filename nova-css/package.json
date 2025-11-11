@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/nova-css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NovaCSS - A hybrid CSS framework combining utility classes and prebuilt components for modern web apps. Includes glassmorphism-inspired design, responsive utilities, and smooth animations.",
   "main": "dist/nova.css",
   "style": "dist/nova.css",
