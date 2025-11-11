@@ -1,0 +1,37 @@
+# Source files
+src/
+*.scss
+!dist/*.css
+
+# Development files
+node_modules/
+.vite/
+*.log
+.DS_Store
+
+# Config files
+vite.config.ts
+tsconfig.json
+
+# Documentation (keep README, LICENSE, CHANGELOG)
+# README.md is included
+# LICENSE is included
+# CHANGELOG.md is included
+CONTRIBUTING.md
+EXAMPLES.md
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
+*.test.*
+vitest.config.*
+

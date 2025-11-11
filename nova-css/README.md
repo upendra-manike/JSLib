@@ -807,6 +807,13 @@ MIT © Upendra Manike
 
 ---
 
+## 📖 Additional Documentation
+
+- **[EXAMPLES.md](./EXAMPLES.md)** - Comprehensive examples and use cases
+- **[CHANGELOG.md](./CHANGELOG.md)** - Version history and changes
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Guidelines for contributing
+- **[LICENSE](./LICENSE)** - MIT License
+
 ## Support
 
 If you find NovaCSS useful, please consider:

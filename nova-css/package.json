@@ -5,7 +5,10 @@
   "main": "dist/nova.css",
   "style": "dist/nova.css",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "type": "module",
   "scripts": {
@@ -28,6 +31,15 @@
   ],
   "author": "Upendra Manike <upendra.manike@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "nova-css"
+  },
+  "bugs": {
+    "url": "https://github.com/upendra-manike/JSLib/issues"
+  },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/nova-css#readme",
   "devDependencies": {
     "sass": "^1.80.0",
     "vite": "^5.4.0"
