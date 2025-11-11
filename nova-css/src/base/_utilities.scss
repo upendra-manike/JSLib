@@ -1,0 +1,60 @@
+.bg-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow-soft);
+}
+
+.surface-elevated {
+  background-color: var(--surface-elevated);
+  backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--surface-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.rounded-2 {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-3 {
+  border-radius: 24px;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-hard {
+  box-shadow: var(--shadow-hard);
+}
+
+.max-w-screen {
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0),
+    rgba(99, 102, 241, 0.3),
+    rgba(99, 102, 241, 0)
+  );
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  background-color: rgba(99, 102, 241, 0.12);
+  color: var(--primary);
+}
+
+

@@ -1,0 +1,46 @@
+:root {
+  /* Brand palette */
+  --primary: #6366f1;
+  --primary-contrast: #ffffff;
+  --secondary: #22d3ee;
+  --secondary-contrast: #0f172a;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #38bdf8;
+
+  /* Surfaces & typography */
+  --surface: #f8fafc;
+  --surface-elevated: rgba(255, 255, 255, 0.75);
+  --surface-border: rgba(15, 23, 42, 0.08);
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  /* Effects */
+  --blur: 24px;
+  --shadow-soft: 0 12px 40px rgba(15, 23, 42, 0.12);
+  --shadow-hard: 0 18px 44px rgba(15, 23, 42, 0.18);
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --transition: 0.25s ease;
+
+  /* Layout */
+  --container-width: min(1120px, calc(100% - 2rem));
+  --nav-height: 72px;
+}
+
+[data-theme='dark'] {
+  --surface: #0b1120;
+  --surface-elevated: rgba(15, 23, 42, 0.65);
+  --surface-border: rgba(148, 163, 184, 0.18);
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --primary: #818cf8;
+  --secondary: #38bdf8;
+  --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.45);
+  --shadow-hard: 0 24px 70px rgba(15, 23, 42, 0.6);
+}
+
+

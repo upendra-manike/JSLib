@@ -1,0 +1,32 @@
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+.text-info { color: var(--info); }
+.text-inverse { color: var(--text-inverse); }
+
+.bg-surface { background-color: var(--surface); color: var(--text-primary); }
+.bg-elevated { background-color: var(--surface-elevated); color: var(--text-primary); }
+.bg-primary { background-color: var(--primary); color: var(--primary-contrast); }
+.bg-secondary { background-color: var(--secondary); color: var(--secondary-contrast); }
+.bg-success { background-color: var(--success); color: #fff; }
+.bg-warning { background-color: var(--warning); color: #111827; }
+.bg-danger { background-color: var(--danger); color: #fff; }
+.bg-info { background-color: var(--info); color: #0f172a; }
+
+.border-primary { border: 1px solid rgba(99, 102, 241, 0.4); }
+.border-secondary { border: 1px solid rgba(34, 211, 238, 0.4); }
+.border-muted { border: 1px solid var(--surface-border); }
+
+.gradient-primary {
+  background-image: linear-gradient(135deg, var(--primary), rgba(99, 102, 241, 0.6));
+  color: var(--primary-contrast);
+}
+
+.gradient-secondary {
+  background-image: linear-gradient(135deg, var(--secondary), rgba(56, 189, 248, 0.6));
+  color: var(--secondary-contrast);
+}
+
+
