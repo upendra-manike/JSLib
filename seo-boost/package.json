@@ -1,0 +1,70 @@
+{
+  "name": "@upendra.manike/seo-boost",
+  "version": "0.1.0",
+  "description": "SEO optimization package for JavaScript/React/Next.js/Vue apps. Automatic meta tags, JSON-LD schema, OpenGraph, Twitter cards, sitemap generation, and SEO analysis. Perfect for AI code generation.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "seo",
+    "meta-tags",
+    "open-graph",
+    "twitter-cards",
+    "json-ld",
+    "structured-data",
+    "sitemap",
+    "robots-txt",
+    "react",
+    "nextjs",
+    "vue",
+    "spa",
+    "ssr",
+    "seo-optimization",
+    "search-engine",
+    "ai-agent",
+    "ai-friendly",
+    "llm",
+    "code-generation",
+    "chatgpt",
+    "claude",
+    "copilot"
+  ],
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "seo-boost"
+  },
+  "bugs": {
+    "url": "https://github.com/upendra-manike/JSLib/issues"
+  },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/seo-boost#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.4",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

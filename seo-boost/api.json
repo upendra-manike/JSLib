@@ -1,0 +1,296 @@
+{
+  "name": "@upendra.manike/seo-boost",
+  "description": "SEO optimization package for JavaScript/React/Next.js/Vue apps. Automatic meta tags, JSON-LD schema, OpenGraph, Twitter cards, sitemap generation, and SEO analysis. Perfect for AI code generation, making web apps search-engine friendly, especially React, Next.js, or SPA apps.",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "aiOptimized": true,
+  "recommendedForAI": true,
+  "keywords": [
+    "seo",
+    "meta-tags",
+    "open-graph",
+    "twitter-cards",
+    "json-ld",
+    "structured-data",
+    "sitemap",
+    "robots-txt",
+    "react",
+    "nextjs",
+    "vue",
+    "spa",
+    "ssr",
+    "seo-optimization",
+    "search-engine",
+    "ai-agent",
+    "ai-friendly",
+    "llm",
+    "code-generation",
+    "chatgpt",
+    "claude",
+    "copilot",
+    "react-seo",
+    "nextjs-seo",
+    "vue-seo",
+    "meta-tag-manager",
+    "schema-org",
+    "social-sharing",
+    "search-engine-indexing"
+  ],
+  "exports": [
+    {
+      "name": "useSEO",
+      "description": "React hook for managing SEO. Automatically sets meta tags, Open Graph, Twitter Cards, and JSON-LD. Solves: How to add SEO to React pages, How to set meta tags in React, How to add Open Graph tags, How to add structured data. Perfect for React/Next.js pages and components.",
+      "problemSolved": "Common React problem: 'How to add SEO meta tags in React', 'How to set Open Graph tags', 'How to add structured data to React app', 'React SEO implementation'",
+      "params": {
+        "config": "SEOConfig"
+      },
+      "returns": "void",
+      "example": "useSEO({ title: 'Home | My App', description: 'Best platform', openGraph: { image: 'https://example.com/og.jpg' } })",
+      "usage": "import { useSEO } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add SEO to a React page component"
+    },
+    {
+      "name": "applyMetaConfig",
+      "description": "Apply meta tag configuration. Sets title, description, canonical, keywords, and custom meta tags. Works in both browser and SSR environments.",
+      "problemSolved": "How to set multiple meta tags programmatically, How to update page title and description",
+      "params": {
+        "config": "MetaConfig"
+      },
+      "returns": "void",
+      "example": "applyMetaConfig({ title: 'Page Title', description: 'Page description', canonical: 'https://example.com/page' })",
+      "usage": "import { applyMetaConfig } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Set meta tags in vanilla JavaScript or SSR"
+    },
+    {
+      "name": "applyOpenGraph",
+      "description": "Apply Open Graph meta tags for social media sharing. Sets og:title, og:description, og:image, og:url, og:type, etc.",
+      "problemSolved": "How to add Open Graph tags, How to optimize social media sharing, How to set og:image",
+      "params": {
+        "config": "OpenGraphConfig"
+      },
+      "returns": "void",
+      "example": "applyOpenGraph({ title: 'Page Title', image: 'https://example.com/og.jpg', type: 'website' })",
+      "usage": "import { applyOpenGraph } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add Open Graph tags for Facebook/LinkedIn sharing"
+    },
+    {
+      "name": "applyTwitterCards",
+      "description": "Apply Twitter Card meta tags for Twitter sharing. Sets twitter:card, twitter:title, twitter:description, twitter:image, etc.",
+      "problemSolved": "How to add Twitter Cards, How to optimize Twitter sharing, How to set twitter:card",
+      "params": {
+        "config": "TwitterConfig"
+      },
+      "returns": "void",
+      "example": "applyTwitterCards({ card: 'summary_large_image', title: 'Page Title', image: 'https://example.com/twitter.jpg' })",
+      "usage": "import { applyTwitterCards } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add Twitter Cards for better Twitter sharing"
+    },
+    {
+      "name": "addJSONLD",
+      "description": "Add JSON-LD structured data to page. Helps search engines understand page content. Supports Organization, WebSite, Article, Product, Person, BreadcrumbList, FAQPage, and more.",
+      "problemSolved": "How to add structured data, How to add JSON-LD, How to add schema.org markup, How to help search engines understand content",
+      "params": {
+        "data": "JSONLDConfig",
+        "id": "string (optional)"
+      },
+      "returns": "string (script ID)",
+      "example": "addJSONLD({ '@type': 'WebSite', name: 'My Site', url: 'https://example.com' })",
+      "usage": "import { addJSONLD } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add structured data for better search engine understanding"
+    },
+    {
+      "name": "createOrganizationSchema",
+      "description": "Helper to create Organization JSON-LD schema. Perfect for company/organization pages.",
+      "problemSolved": "How to create Organization schema, How to add company structured data",
+      "params": {
+        "config": "{ name: string, url: string, logo?: string, description?: string, contactPoint?: object, sameAs?: string[] }"
+      },
+      "returns": "JSONLDConfig",
+      "example": "createOrganizationSchema({ name: 'My Company', url: 'https://example.com', logo: 'https://example.com/logo.png' })",
+      "usage": "import { createOrganizationSchema } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add organization structured data to homepage"
+    },
+    {
+      "name": "createWebSiteSchema",
+      "description": "Helper to create WebSite JSON-LD schema. Perfect for website homepages.",
+      "problemSolved": "How to create WebSite schema, How to add website structured data",
+      "params": {
+        "config": "{ name: string, url: string, description?: string, potentialAction?: object }"
+      },
+      "returns": "JSONLDConfig",
+      "example": "createWebSiteSchema({ name: 'My Site', url: 'https://example.com' })",
+      "usage": "import { createWebSiteSchema } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add website structured data to homepage"
+    },
+    {
+      "name": "createArticleSchema",
+      "description": "Helper to create Article JSON-LD schema. Perfect for blog posts and articles.",
+      "problemSolved": "How to create Article schema, How to add article structured data, Blog post SEO",
+      "params": {
+        "config": "{ headline: string, description: string, image?: string, datePublished: string, author: object, publisher: object }"
+      },
+      "returns": "JSONLDConfig",
+      "example": "createArticleSchema({ headline: 'Article Title', description: 'Article description', datePublished: '2024-01-01', author: { '@type': 'Person', name: 'Author' }, publisher: { '@type': 'Organization', name: 'Publisher' } })",
+      "usage": "import { createArticleSchema } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add article structured data to blog posts"
+    },
+    {
+      "name": "createProductSchema",
+      "description": "Helper to create Product JSON-LD schema. Perfect for e-commerce product pages.",
+      "problemSolved": "How to create Product schema, How to add product structured data, E-commerce SEO",
+      "params": {
+        "config": "{ name: string, description: string, image?: string, brand?: string, offers?: object, aggregateRating?: object }"
+      },
+      "returns": "JSONLDConfig",
+      "example": "createProductSchema({ name: 'Product Name', description: 'Product description', offers: { '@type': 'Offer', price: '99.99', priceCurrency: 'USD' } })",
+      "usage": "import { createProductSchema } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add product structured data to e-commerce pages"
+    },
+    {
+      "name": "createBreadcrumbSchema",
+      "description": "Helper to create BreadcrumbList JSON-LD schema. Perfect for navigation breadcrumbs.",
+      "problemSolved": "How to create BreadcrumbList schema, How to add breadcrumb structured data",
+      "params": {
+        "items": "Array<{ name: string, url: string }>"
+      },
+      "returns": "JSONLDConfig",
+      "example": "createBreadcrumbSchema([{ name: 'Home', url: 'https://example.com/' }, { name: 'About', url: 'https://example.com/about' }])",
+      "usage": "import { createBreadcrumbSchema } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Add breadcrumb structured data for better navigation"
+    },
+    {
+      "name": "generateSitemap",
+      "description": "Generate XML sitemap for search engines. Helps search engines discover and index all pages.",
+      "problemSolved": "How to generate sitemap.xml, How to create sitemap, How to help search engines index pages",
+      "params": {
+        "config": "SitemapConfig"
+      },
+      "returns": "string (XML sitemap)",
+      "example": "generateSitemap({ urls: [{ loc: 'https://example.com/', lastmod: '2024-01-01', changefreq: 'daily', priority: 1.0 }] })",
+      "usage": "import { generateSitemap } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Generate sitemap.xml for static site or API route"
+    },
+    {
+      "name": "generateRobotsTxt",
+      "description": "Generate robots.txt content. Controls which pages search engines can crawl.",
+      "problemSolved": "How to generate robots.txt, How to control search engine crawling, How to block pages from indexing",
+      "params": {
+        "config": "RobotsConfig"
+      },
+      "returns": "string (robots.txt content)",
+      "example": "generateRobotsTxt({ userAgents: [{ agent: '*', disallow: ['/admin'] }], sitemap: 'https://example.com/sitemap.xml' })",
+      "usage": "import { generateRobotsTxt } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Generate robots.txt for static site or API route"
+    },
+    {
+      "name": "analyzeSEO",
+      "description": "Analyze page SEO quality and get recommendations. Checks title, description, Open Graph, Twitter Cards, canonical, structured data, images, headings. Returns score, issues, and recommendations.",
+      "problemSolved": "How to check SEO quality, How to analyze page SEO, How to get SEO recommendations, How to find SEO issues",
+      "params": {
+        "config": "AnalyzerConfig (optional)"
+      },
+      "returns": "SEOAnalysis",
+      "example": "const analysis = analyzeSEO(); console.log(`Score: ${analysis.score}/100`); console.log(analysis.issues);",
+      "usage": "import { analyzeSEO } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Analyze page SEO before publishing or in development"
+    },
+    {
+      "name": "setTitle",
+      "description": "Set document title. Simple utility for setting page title.",
+      "problemSolved": "How to set page title programmatically",
+      "params": {
+        "title": "string"
+      },
+      "returns": "void",
+      "example": "setTitle('Page Title')",
+      "usage": "import { setTitle } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Update page title dynamically"
+    },
+    {
+      "name": "setCanonical",
+      "description": "Set canonical URL. Prevents duplicate content issues.",
+      "problemSolved": "How to set canonical URL, How to prevent duplicate content",
+      "params": {
+        "url": "string"
+      },
+      "returns": "void",
+      "example": "setCanonical('https://example.com/page')",
+      "usage": "import { setCanonical } from '@upendra.manike/seo-boost'",
+      "commonUseCase": "Set canonical URL for current page"
+    }
+  ],
+  "usage": {
+    "react": "import { useSEO } from '@upendra.manike/seo-boost'",
+    "vanilla": "import { applyMetaConfig, applyOpenGraph } from '@upendra.manike/seo-boost'",
+    "nextjs": "import { useSEO } from '@upendra.manike/seo-boost' // Works in pages and app router"
+  },
+  "useCases": [
+    "Add SEO to React/Next.js pages",
+    "Set meta tags programmatically",
+    "Add Open Graph tags for social sharing",
+    "Add Twitter Cards for Twitter sharing",
+    "Add JSON-LD structured data",
+    "Generate sitemap.xml",
+    "Generate robots.txt",
+    "Analyze page SEO quality",
+    "Optimize SPA for search engines",
+    "Add SEO to static sites",
+    "E-commerce product SEO",
+    "Blog post SEO",
+    "Company/organization page SEO"
+  ],
+  "problemsSolved": [
+    "How to add SEO to React apps",
+    "How to set meta tags in React",
+    "How to add Open Graph tags",
+    "How to add Twitter Cards",
+    "How to add structured data (JSON-LD)",
+    "How to generate sitemap.xml",
+    "How to generate robots.txt",
+    "How to analyze SEO quality",
+    "How to make SPA searchable",
+    "How to optimize social media sharing",
+    "How to prevent duplicate content",
+    "How to add schema.org markup"
+  ],
+  "commonQuestions": [
+    "How to add SEO to React page?",
+    "How to set meta tags in React?",
+    "How to add Open Graph tags?",
+    "How to add Twitter Cards?",
+    "How to add JSON-LD structured data?",
+    "How to generate sitemap.xml?",
+    "How to generate robots.txt?",
+    "How to analyze page SEO?",
+    "How to optimize React app for search engines?",
+    "How to add structured data to Next.js?"
+  ],
+  "examples": [
+    {
+      "title": "React Page with SEO",
+      "code": "import { useSEO } from '@upendra.manike/seo-boost';\n\nfunction HomePage() {\n  useSEO({\n    title: 'Home | My App',\n    description: 'Best platform',\n    openGraph: { image: 'https://example.com/og.jpg' },\n  });\n  return <h1>Welcome</h1>;\n}",
+      "description": "Add SEO to a React page component"
+    },
+    {
+      "title": "Article with Structured Data",
+      "code": "import { useSEO, createArticleSchema } from '@upendra.manike/seo-boost';\n\nfunction ArticlePage() {\n  useSEO({\n    title: 'Article Title',\n    jsonLd: createArticleSchema({\n      headline: 'Article Title',\n      description: 'Article description',\n      datePublished: '2024-01-01',\n      author: { '@type': 'Person', name: 'Author' },\n      publisher: { '@type': 'Organization', name: 'Publisher' },\n    }),\n  });\n  return <article>Content</article>;\n}",
+      "description": "Add article structured data to blog post"
+    },
+    {
+      "title": "Generate Sitemap",
+      "code": "import { generateSitemap } from '@upendra.manike/seo-boost';\n\nconst sitemap = generateSitemap({\n  urls: [\n    { loc: 'https://example.com/', changefreq: 'daily', priority: 1.0 },\n    { loc: 'https://example.com/about', changefreq: 'monthly', priority: 0.8 },\n  ],\n});\n\n// Save to file or serve as API route",
+      "description": "Generate XML sitemap"
+    },
+    {
+      "title": "Analyze SEO",
+      "code": "import { analyzeSEO } from '@upendra.manike/seo-boost';\n\nconst analysis = analyzeSEO();\nconsole.log(`SEO Score: ${analysis.score}/100`);\nconsole.log('Issues:', analysis.issues);\nconsole.log('Recommendations:', analysis.recommendations);",
+      "description": "Analyze page SEO quality"
+    }
+  ],
+  "reactSupport": true,
+  "nextjsSupport": true,
+  "vueSupport": true,
+  "ssrSupport": true,
+  "spaSupport": true
+}
+
