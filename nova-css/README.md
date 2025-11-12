@@ -1,11 +1,13 @@
-# NovaCSS
+# RudraCSS
 
 > A modern, hybrid CSS framework combining utility-first classes with polished components. Built for fast development without sacrificing aesthetics.
 
-[![npm version](https://img.shields.io/npm/v/@upendra.manike/nova-css)](https://www.npmjs.com/package/@upendra.manike/nova-css)
+[![npm version](https://img.shields.io/npm/v/@upendra.manike/rudra-css)](https://www.npmjs.com/package/@upendra.manike/rudra-css)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-NovaCSS is engineered for modern dashboards, SaaS products, and marketing sites that need a fast workflow with a beautiful, glassmorphism-inspired design system.
+RudraCSS is engineered for modern dashboards, SaaS products, and marketing sites that need a fast workflow with a beautiful, glassmorphism-inspired design system.
+
+**🤖 Optimized for AI Agents**: RudraCSS is fully documented and structured for AI code generation. All classes, components, and utilities are documented in `api.json` for easy discovery by AI coding assistants.
 
 ## ✨ Features
 
@@ -17,15 +19,16 @@ NovaCSS is engineered for modern dashboards, SaaS products, and marketing sites 
 - **📱 Mobile-first & responsive** utilities
 - **🔧 Zero JavaScript** - pure CSS/SCSS
 - **📦 Lightweight** - minimal bundle size
+- **🔒 CSS-friendly** - conservative reset that won't break existing styles (like Bootstrap)
 
 ## 📦 Installation
 
 ```bash
-npm install @upendra.manike/nova-css
+npm install @upendra.manike/rudra-css
 # or
-yarn add @upendra.manike/nova-css
+yarn add @upendra.manike/rudra-css
 # or
-pnpm add @upendra.manike/nova-css
+pnpm add @upendra.manike/rudra-css
 ```
 
 ## 🚀 Quick Start
@@ -33,20 +36,31 @@ pnpm add @upendra.manike/nova-css
 ### Import in JavaScript/TypeScript
 
 ```ts
-import '@upendra.manike/nova-css/dist/nova.css';
+import '@upendra.manike/rudra-css/dist/rudra.css';
 ```
 
 ### Include in HTML
 
 ```html
-<link rel="stylesheet" href="node_modules/@upendra.manike/nova-css/dist/nova.css" />
+<link rel="stylesheet" href="node_modules/@upendra.manike/rudra-css/dist/rudra.css" />
 ```
 
 ### CDN (unpkg)
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@upendra.manike/nova-css@latest/dist/nova.css" />
+<link rel="stylesheet" href="https://unpkg.com/@upendra.manike/rudra-css@latest/dist/rudra.css" />
 ```
+
+### ⚠️ CSS Compatibility
+
+RudraCSS uses a **conservative CSS reset** (similar to Bootstrap/Normalize.css) that:
+- ✅ Only normalizes cross-browser differences
+- ✅ Doesn't aggressively reset margins/padding on all elements
+- ✅ Preserves existing form element styling
+- ✅ Uses class-based typography (opt-in) instead of global element styles
+- ✅ Works alongside existing CSS without breaking your styles
+
+This means you can safely add RudraCSS to existing projects without worrying about it breaking your current styles!
 
 ## 📚 Documentation
 
@@ -451,7 +465,7 @@ Fully styled navigation bar with glassmorphism effect:
 **Example:**
 ```html
 <nav class="navbar">
-  <div class="navbar-brand">NovaCSS</div>
+  <div class="navbar-brand">RudraCSS</div>
   <div class="navbar-menu">
     <a href="#home" class="navbar-link">Home</a>
     <a href="#docs" class="navbar-link">Docs</a>
@@ -525,7 +539,7 @@ Fully styled modal component with backdrop (JavaScript required for show/hide):
 
 ## Theming
 
-NovaCSS uses CSS variables for easy theming. Override variables in your stylesheet:
+RudraCSS uses CSS variables for easy theming. Override variables in your stylesheet:
 
 ```css
 :root {
@@ -688,7 +702,7 @@ Use animation utility classes for smooth transitions:
 
 ## Browser Support
 
-NovaCSS works in all modern browsers that support:
+RudraCSS works in all modern browsers that support:
 - CSS Custom Properties (CSS Variables)
 - Flexbox
 - `backdrop-filter` (for glassmorphism effects)
@@ -709,7 +723,7 @@ NovaCSS works in all modern browsers that support:
 
 ```bash
 # Clone or navigate to the package
-cd nova-css
+cd rudra-css
 
 # Install dependencies
 npm install
@@ -727,7 +741,7 @@ npm run preview
 ### Project Structure
 
 ```
-nova-css/
+rudra-css/
 ├── src/
 │   ├── base/
 │   │   ├── _reset.scss          # CSS reset
@@ -750,7 +764,7 @@ nova-css/
 │   │   └── _modal.scss          # Modal component
 │   └── index.scss               # Main entry point
 ├── dist/
-│   └── nova.css                 # Compiled CSS
+│   └── rudra.css                 # Compiled CSS
 ├── package.json
 ├── vite.config.ts               # Vite build config
 └── README.md
@@ -764,11 +778,11 @@ The build process compiles SCSS to CSS using Vite:
 npm run build
 ```
 
-Output: `dist/nova.css`
+Output: `dist/rudra.css`
 
 ### Customization
 
-To customize NovaCSS:
+To customize RudraCSS:
 
 1. **Override CSS variables** in your stylesheet (recommended)
 2. **Extend SCSS files** by importing and modifying variables
@@ -796,7 +810,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [ ] Theme generator & dark mode presets
 - [ ] Documentation site with examples (VitePress)
 - [ ] Playground with CodeSandbox integration
-- [ ] Tailwind plugin for NovaCSS theme extension
+- [ ] Tailwind plugin for RudraCSS theme extension
 - [ ] TypeScript definitions for class names (optional)
 
 ---
@@ -816,7 +830,7 @@ MIT © Upendra Manike
 
 ## Support
 
-If you find NovaCSS useful, please consider:
+If you find RudraCSS useful, please consider:
 - ⭐ Starring the repository
 - 🐛 Reporting bugs
 - 💡 Suggesting features

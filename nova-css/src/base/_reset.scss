@@ -1,22 +1,30 @@
+/* Conservative CSS Reset - Similar to Normalize.css/Bootstrap approach */
+/* Only normalizes cross-browser differences, doesn't aggressively reset everything */
+
+/* Box-sizing normalization */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html,
+/* Document-level normalization */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Body normalization - only set defaults, don't override existing styles */
 body {
-  width: 100%;
-  min-height: 100%;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--surface, #f5f7fb);
-  color: var(--text-primary, #0f172a);
+  margin: 0;
+  font-family: var(--font-sans, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Media elements - normalize display */
 img,
 picture,
 video,
@@ -24,21 +32,46 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
+/* Form elements - normalize, but don't strip all styling */
 button,
 input,
 select,
 textarea {
-  font: inherit;
-  color: inherit;
-  border: none;
-  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
 }
 
+/* Links - only normalize, don't remove decoration (let users style) */
 a {
-  color: inherit;
-  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Buttons - normalize cursor */
+button {
+  cursor: pointer;
+}
+
+/* Lists - only normalize, preserve list-style */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings - only normalize font-weight inheritance */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+/* Tables - normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 

@@ -1,6 +1,6 @@
-# NovaCSS Examples
+# RudraCSS Examples
 
-This document provides practical examples of using NovaCSS in real-world scenarios.
+This document provides practical examples of using RudraCSS in real-world scenarios.
 
 ## Table of Contents
 
@@ -25,8 +25,8 @@ This document provides practical examples of using NovaCSS in real-world scenari
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - NovaCSS</title>
-  <link rel="stylesheet" href="node_modules/@upendra.manike/nova-css/dist/nova.css">
+  <title>Dashboard - RudraCSS</title>
+  <link rel="stylesheet" href="node_modules/@upendra.manike/rudra-css/dist/rudra.css">
 </head>
 <body class="bg-surface">
   <!-- Navbar -->
@@ -372,7 +372,7 @@ function confirmDelete() {
     Build Beautiful Websites Faster
   </h1>
   <p class="text-xl text-muted mb-8 max-w-2xl mx-auto">
-    NovaCSS is a modern CSS framework that combines utility classes with 
+    RudraCSS is a modern CSS framework that combines utility classes with 
     polished components for rapid development.
   </p>
   <div class="flex gap-4 justify-center">
@@ -386,7 +386,7 @@ function confirmDelete() {
 
 ```html
 <section class="max-w-screen px-6 py-12">
-  <h2 class="text-3xl font-bold text-center mb-12">Why Choose NovaCSS?</h2>
+  <h2 class="text-3xl font-bold text-center mb-12">Why Choose RudraCSS?</h2>
   <div class="flex flex-col gap-8 md:flex-row">
     <div class="flex-1 text-center">
       <div class="bg-primary rounded-full p-6 w-fit mx-auto mb-4">
@@ -502,8 +502,8 @@ function confirmDelete() {
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Dark Mode - NovaCSS</title>
-  <link rel="stylesheet" href="node_modules/@upendra.manike/nova-css/dist/nova.css">
+  <title>Dark Mode - RudraCSS</title>
+  <link rel="stylesheet" href="node_modules/@upendra.manike/rudra-css/dist/rudra.css">
 </head>
 <body class="bg-surface">
   <div class="card shadow-lg max-w-md mx-auto mt-12">

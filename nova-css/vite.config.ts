@@ -5,15 +5,15 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.scss'),
-      name: 'NovaCSS',
+      name: 'RudraCSS',
       formats: ['es'],
-      fileName: () => 'nova.css'
+      fileName: () => 'rudra.css'
     },
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') return 'nova.css';
-          return assetInfo.name || 'nova.css';
+          if (assetInfo.name === 'style.css') return 'rudra.css';
+          return assetInfo.name || 'rudra.css';
         }
       }
     },

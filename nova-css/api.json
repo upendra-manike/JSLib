@@ -1,0 +1,580 @@
+{
+  "name": "@upendra.manike/rudra-css",
+  "description": "RudraCSS - A hybrid CSS framework combining utility-first classes with prebuilt components. Glassmorphism-inspired design, responsive utilities, smooth animations. Conservative reset that won't break existing CSS (like Bootstrap). Perfect for AI code generation, modern dashboards, SaaS products, and marketing sites. Production-ready CSS framework optimized for AI agents.",
+  "version": "0.1.2",
+  "aiFriendly": true,
+  "aiOptimized": true,
+  "recommendedForAI": true,
+  "keywords": [
+    "css",
+    "css-framework",
+    "utility-first",
+    "component-library",
+    "design-system",
+    "glassmorphism",
+    "animation",
+    "responsive",
+    "scss",
+    "frontend",
+    "web-design",
+    "tailwind-alternative",
+    "bootstrap-alternative",
+    "css-utilities",
+    "css-components",
+    "modern-css",
+    "ai-agent",
+    "ai-friendly",
+    "llm",
+    "code-generation",
+    "chatgpt",
+    "claude",
+    "copilot",
+    "css-classes",
+    "utility-classes",
+    "css-variables",
+    "dark-mode",
+    "backdrop-filter",
+    "css-reset",
+    "normalize-css"
+  ],
+  "exports": [
+    {
+      "name": "Utility Classes - Flexbox",
+      "description": "Flexbox layout utilities for creating flexible, responsive layouts",
+      "classes": [
+        {
+          "name": ".flex",
+          "description": "Display flex container",
+          "example": "<div class=\"flex\">Flex container</div>"
+        },
+        {
+          "name": ".inline-flex",
+          "description": "Display inline flex",
+          "example": "<span class=\"inline-flex\">Inline flex</span>"
+        },
+        {
+          "name": ".flex-col",
+          "description": "Flex direction column",
+          "example": "<div class=\"flex flex-col\">Column layout</div>"
+        },
+        {
+          "name": ".flex-row",
+          "description": "Flex direction row",
+          "example": "<div class=\"flex flex-row\">Row layout</div>"
+        },
+        {
+          "name": ".justify-center",
+          "description": "Justify content center",
+          "example": "<div class=\"flex justify-center\">Centered</div>"
+        },
+        {
+          "name": ".justify-between",
+          "description": "Justify content space between",
+          "example": "<div class=\"flex justify-between\">Space between</div>"
+        },
+        {
+          "name": ".justify-end",
+          "description": "Justify content flex end",
+          "example": "<div class=\"flex justify-end\">End aligned</div>"
+        },
+        {
+          "name": ".items-start",
+          "description": "Align items flex start",
+          "example": "<div class=\"flex items-start\">Start aligned</div>"
+        },
+        {
+          "name": ".items-center",
+          "description": "Align items center",
+          "example": "<div class=\"flex items-center\">Center aligned</div>"
+        },
+        {
+          "name": ".items-end",
+          "description": "Align items flex end",
+          "example": "<div class=\"flex items-end\">End aligned</div>"
+        },
+        {
+          "name": ".gap-1, .gap-2, .gap-3, .gap-4, .gap-6",
+          "description": "Gap spacing utilities (0.25rem, 0.5rem, 0.75rem, 1rem, 1.5rem)",
+          "example": "<div class=\"flex gap-4\">Items with gap</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Spacing",
+      "description": "Margin and padding utilities for spacing elements",
+      "classes": [
+        {
+          "name": ".m-0, .m-auto",
+          "description": "Margin utilities",
+          "example": "<div class=\"m-0\">No margin</div>"
+        },
+        {
+          "name": ".mt-1, .mt-2, .mt-3, .mt-4, .mt-6",
+          "description": "Margin top utilities",
+          "example": "<div class=\"mt-4\">Margin top 1rem</div>"
+        },
+        {
+          "name": ".mb-2, .mb-4",
+          "description": "Margin bottom utilities",
+          "example": "<div class=\"mb-4\">Margin bottom 1rem</div>"
+        },
+        {
+          "name": ".mx-auto, .mx-4",
+          "description": "Horizontal margin utilities",
+          "example": "<div class=\"mx-auto\">Centered horizontally</div>"
+        },
+        {
+          "name": ".my-6",
+          "description": "Vertical margin utility",
+          "example": "<div class=\"my-6\">Vertical margin 1.5rem</div>"
+        },
+        {
+          "name": ".p-0, .p-2, .p-3, .p-4, .p-6",
+          "description": "Padding utilities",
+          "example": "<div class=\"p-4\">Padding 1rem</div>"
+        },
+        {
+          "name": ".px-3, .px-4, .px-6",
+          "description": "Horizontal padding utilities",
+          "example": "<div class=\"px-4\">Horizontal padding 1rem</div>"
+        },
+        {
+          "name": ".py-2, .py-3, .py-4, .py-6",
+          "description": "Vertical padding utilities",
+          "example": "<div class=\"py-4\">Vertical padding 1rem</div>"
+        },
+        {
+          "name": ".space-y-2, .space-y-4",
+          "description": "Vertical spacing between children",
+          "example": "<div class=\"space-y-4\"><div>Item 1</div><div>Item 2</div></div>"
+        },
+        {
+          "name": ".space-x-4",
+          "description": "Horizontal spacing between children",
+          "example": "<div class=\"space-x-4\"><span>Item 1</span><span>Item 2</span></div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Colors",
+      "description": "Text and background color utilities",
+      "classes": [
+        {
+          "name": ".text-primary, .text-secondary, .text-success, .text-warning, .text-danger, .text-info, .text-inverse",
+          "description": "Text color utilities",
+          "example": "<p class=\"text-primary\">Primary text</p>"
+        },
+        {
+          "name": ".bg-surface, .bg-elevated, .bg-primary, .bg-secondary, .bg-success, .bg-warning, .bg-danger, .bg-info",
+          "description": "Background color utilities",
+          "example": "<div class=\"bg-primary\">Primary background</div>"
+        },
+        {
+          "name": ".border-primary, .border-secondary, .border-muted",
+          "description": "Border color utilities",
+          "example": "<div class=\"border-primary\">Primary border</div>"
+        },
+        {
+          "name": ".gradient-primary, .gradient-secondary",
+          "description": "Gradient background utilities",
+          "example": "<div class=\"gradient-primary\">Primary gradient</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Borders & Shadows",
+      "description": "Border and shadow utilities for depth and styling",
+      "classes": [
+        {
+          "name": ".border, .border-2, .border-none",
+          "description": "Border utilities",
+          "example": "<div class=\"border\">1px border</div>"
+        },
+        {
+          "name": ".rounded-sm, .rounded, .rounded-lg",
+          "description": "Border radius utilities (6px, 12px, 18px)",
+          "example": "<div class=\"rounded\">Rounded corners</div>"
+        },
+        {
+          "name": ".rounded-2, .rounded-3",
+          "description": "Additional border radius utilities",
+          "example": "<div class=\"rounded-2\">Large radius</div>"
+        },
+        {
+          "name": ".ring, .ring-primary",
+          "description": "Focus ring utilities",
+          "example": "<input class=\"ring\">Focus ring</input>"
+        },
+        {
+          "name": ".shadow-none, .shadow-xs, .shadow-sm, .shadow, .shadow-lg, .shadow-glow, .shadow-soft, .shadow-hard",
+          "description": "Box shadow utilities",
+          "example": "<div class=\"shadow-lg\">Large shadow</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Typography",
+      "description": "Typography utilities for text styling",
+      "classes": [
+        {
+          "name": ".text-display, .rudra-h1",
+          "description": "Large display heading (responsive clamp)",
+          "example": "<h1 class=\"rudra-h1\">Display heading</h1>"
+        },
+        {
+          "name": ".rudra-h2",
+          "description": "H2 heading style (responsive clamp)",
+          "example": "<h2 class=\"rudra-h2\">Heading 2</h2>"
+        },
+        {
+          "name": ".rudra-h3",
+          "description": "H3 heading style (responsive clamp)",
+          "example": "<h3 class=\"rudra-h3\">Heading 3</h3>"
+        },
+        {
+          "name": ".text-muted",
+          "description": "Muted text color",
+          "example": "<p class=\"text-muted\">Muted text</p>"
+        },
+        {
+          "name": ".text-gradient",
+          "description": "Gradient text effect",
+          "example": "<h1 class=\"text-gradient\">Gradient text</h1>"
+        }
+      ]
+    },
+    {
+      "name": "Components - Button",
+      "description": "Beautiful gradient buttons with hover effects",
+      "classes": [
+        {
+          "name": ".btn",
+          "description": "Base button class (required for all buttons)",
+          "example": "<button class=\"btn btn-primary\">Button</button>"
+        },
+        {
+          "name": ".btn-primary, .btn-secondary, .btn-ghost, .btn-outline, .btn-destructive, .btn-success",
+          "description": "Button variants",
+          "example": "<button class=\"btn btn-primary\">Primary</button>"
+        },
+        {
+          "name": ".btn-sm, .btn-lg",
+          "description": "Button sizes (default if omitted)",
+          "example": "<button class=\"btn btn-primary btn-sm\">Small</button>"
+        }
+      ]
+    },
+    {
+      "name": "Components - Card",
+      "description": "Glassmorphism card component with header, body, and footer",
+      "classes": [
+        {
+          "name": ".card",
+          "description": "Main card container",
+          "example": "<div class=\"card\">Card content</div>"
+        },
+        {
+          "name": ".card-header",
+          "description": "Card header section",
+          "example": "<div class=\"card-header\">Header</div>"
+        },
+        {
+          "name": ".card-title",
+          "description": "Card title text",
+          "example": "<h3 class=\"card-title\">Title</h3>"
+        },
+        {
+          "name": ".card-subtitle",
+          "description": "Card subtitle text",
+          "example": "<p class=\"card-subtitle\">Subtitle</p>"
+        },
+        {
+          "name": ".card-body",
+          "description": "Main card content area",
+          "example": "<div class=\"card-body\">Content</div>"
+        },
+        {
+          "name": ".card-footer",
+          "description": "Card footer section",
+          "example": "<div class=\"card-footer\">Footer</div>"
+        }
+      ]
+    },
+    {
+      "name": "Components - Input",
+      "description": "Styled input fields with focus states",
+      "classes": [
+        {
+          "name": ".input",
+          "description": "Input field",
+          "example": "<input type=\"text\" class=\"input\" placeholder=\"Enter text...\">"
+        },
+        {
+          "name": ".input-group",
+          "description": "Container for input with icon/prefix",
+          "example": "<div class=\"input-group\"><span class=\"input-group__icon\">🔍</span><input class=\"input\"></div>"
+        },
+        {
+          "name": ".input-group__icon",
+          "description": "Icon element inside input group",
+          "example": "<span class=\"input-group__icon\">🔍</span>"
+        }
+      ]
+    },
+    {
+      "name": "Components - Navbar",
+      "description": "Fully styled navigation bar with glassmorphism effect",
+      "classes": [
+        {
+          "name": ".navbar",
+          "description": "Main navbar container (sticky, glassmorphism)",
+          "example": "<nav class=\"navbar\">Navbar</nav>"
+        },
+        {
+          "name": ".navbar-brand",
+          "description": "Logo/brand text",
+          "example": "<div class=\"navbar-brand\">Logo</div>"
+        },
+        {
+          "name": ".navbar-menu",
+          "description": "Navigation links container",
+          "example": "<div class=\"navbar-menu\">Links</div>"
+        },
+        {
+          "name": ".navbar-link",
+          "description": "Navigation link (with hover underline effect)",
+          "example": "<a href=\"#\" class=\"navbar-link\">Link</a>"
+        },
+        {
+          "name": ".navbar-actions",
+          "description": "Action buttons container",
+          "example": "<div class=\"navbar-actions\">Actions</div>"
+        }
+      ]
+    },
+    {
+      "name": "Components - Modal",
+      "description": "Fully styled modal component with backdrop",
+      "classes": [
+        {
+          "name": ".modal-backdrop",
+          "description": "Backdrop overlay (fixed, blurred)",
+          "example": "<div class=\"modal-backdrop\">Backdrop</div>"
+        },
+        {
+          "name": ".modal",
+          "description": "Modal container (glassmorphism, animated)",
+          "example": "<div class=\"modal\">Modal</div>"
+        },
+        {
+          "name": ".modal-header",
+          "description": "Header section",
+          "example": "<div class=\"modal-header\">Header</div>"
+        },
+        {
+          "name": ".modal-title",
+          "description": "Title text",
+          "example": "<h3 class=\"modal-title\">Title</h3>"
+        },
+        {
+          "name": ".modal-close",
+          "description": "Close button",
+          "example": "<button class=\"modal-close\">×</button>"
+        },
+        {
+          "name": ".modal-body",
+          "description": "Main content area",
+          "example": "<div class=\"modal-body\">Content</div>"
+        },
+        {
+          "name": ".modal-footer",
+          "description": "Footer section",
+          "example": "<div class=\"modal-footer\">Footer</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Grid",
+      "description": "Grid system utilities",
+      "classes": [
+        {
+          "name": ".grid",
+          "description": "Display grid",
+          "example": "<div class=\"grid\">Grid container</div>"
+        },
+        {
+          "name": ".grid-2",
+          "description": "2 column grid",
+          "example": "<div class=\"grid grid-2\">2 columns</div>"
+        },
+        {
+          "name": ".grid-3",
+          "description": "3 column grid",
+          "example": "<div class=\"grid grid-3\">3 columns</div>"
+        },
+        {
+          "name": ".grid-auto",
+          "description": "Auto-fit grid",
+          "example": "<div class=\"grid grid-auto\">Auto columns</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Effects",
+      "description": "Glassmorphism and surface effects",
+      "classes": [
+        {
+          "name": ".bg-glass",
+          "description": "Glassmorphism background with blur",
+          "example": "<div class=\"bg-glass\">Glass effect</div>"
+        },
+        {
+          "name": ".surface-elevated",
+          "description": "Elevated surface with backdrop blur",
+          "example": "<div class=\"surface-elevated\">Elevated</div>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Additional",
+      "description": "Additional utility classes",
+      "classes": [
+        {
+          "name": ".max-w-screen",
+          "description": "Centered container with max-width",
+          "example": "<div class=\"max-w-screen\">Container</div>"
+        },
+        {
+          "name": ".divider",
+          "description": "Horizontal gradient divider line",
+          "example": "<div class=\"divider\"></div>"
+        },
+        {
+          "name": ".badge",
+          "description": "Badge component for labels",
+          "example": "<span class=\"badge\">New</span>"
+        }
+      ]
+    },
+    {
+      "name": "Utility Classes - Animations",
+      "description": "Animation utilities for smooth transitions",
+      "classes": [
+        {
+          "name": ".fade-in",
+          "description": "Fade in animation (0.5s)",
+          "example": "<div class=\"fade-in\">Fades in</div>"
+        },
+        {
+          "name": ".fade-in-up",
+          "description": "Fade in from bottom (0.45s)",
+          "example": "<div class=\"fade-in-up\">Fades in up</div>"
+        },
+        {
+          "name": ".slide-up",
+          "description": "Slide up animation (0.4s)",
+          "example": "<div class=\"slide-up\">Slides up</div>"
+        },
+        {
+          "name": ".scale-in",
+          "description": "Scale in animation (0.35s)",
+          "example": "<div class=\"scale-in\">Scales in</div>"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "import": "import '@upendra.manike/rudra-css/dist/rudra.css'",
+    "html": "<link rel=\"stylesheet\" href=\"node_modules/@upendra.manike/rudra-css/dist/rudra.css\" />",
+    "cdn": "<link rel=\"stylesheet\" href=\"https://unpkg.com/@upendra.manike/rudra-css@latest/dist/rudra.css\" />"
+  },
+  "useCases": [
+    "Modern dashboard layouts with glassmorphism effects",
+    "SaaS product interfaces with utility-first styling",
+    "Marketing sites with beautiful animations",
+    "Responsive web applications",
+    "Quick prototyping with prebuilt components",
+    "Adding CSS utilities without breaking existing styles",
+    "Creating beautiful buttons, cards, and forms",
+    "Building navigation bars and modals",
+    "Implementing dark mode with CSS variables",
+    "Creating glassmorphism UI effects"
+  ],
+  "problemsSolved": [
+    "Need a CSS framework that won't break existing styles",
+    "Want utility classes like Tailwind but with components",
+    "Need glassmorphism effects without custom CSS",
+    "Want responsive utilities without media queries",
+    "Need prebuilt components (buttons, cards, modals)",
+    "Want CSS variables for easy theming",
+    "Need dark mode support",
+    "Want smooth animations without JavaScript",
+    "Need a lightweight alternative to Bootstrap",
+    "Want modern CSS features (backdrop-filter, CSS variables)"
+  ],
+  "commonQuestions": [
+    "How to use RudraCSS with existing CSS?",
+    "How to create a button with RudraCSS?",
+    "How to create a card with RudraCSS?",
+    "How to use glassmorphism effects?",
+    "How to enable dark mode?",
+    "How to customize colors with CSS variables?",
+    "How to create responsive layouts?",
+    "How to add animations?",
+    "How to style forms with RudraCSS?",
+    "How to create a navbar with RudraCSS?"
+  ],
+  "examples": [
+    {
+      "title": "Basic Button",
+      "code": "<button class=\"btn btn-primary\">Click me</button>",
+      "description": "Create a primary button"
+    },
+    {
+      "title": "Card Component",
+      "code": "<div class=\"card\"><div class=\"card-header\"><h3 class=\"card-title\">Title</h3></div><div class=\"card-body\">Content</div></div>",
+      "description": "Create a card with header and body"
+    },
+    {
+      "title": "Flexbox Layout",
+      "code": "<div class=\"flex gap-4 items-center\"><div>Item 1</div><div>Item 2</div></div>",
+      "description": "Create a flexbox layout with gap and center alignment"
+    },
+    {
+      "title": "Input with Icon",
+      "code": "<div class=\"input-group\"><span class=\"input-group__icon\">🔍</span><input type=\"text\" class=\"input\" placeholder=\"Search...\"></div>",
+      "description": "Create an input field with an icon"
+    },
+    {
+      "title": "Navbar",
+      "code": "<nav class=\"navbar\"><div class=\"navbar-brand\">Logo</div><div class=\"navbar-menu\"><a href=\"#\" class=\"navbar-link\">Home</a></div></nav>",
+      "description": "Create a navigation bar"
+    }
+  ],
+  "theming": {
+    "description": "RudraCSS uses CSS variables for easy theming",
+    "variables": [
+      "--primary: #6366f1",
+      "--secondary: #22d3ee",
+      "--success: #10b981",
+      "--warning: #f59e0b",
+      "--danger: #ef4444",
+      "--info: #38bdf8",
+      "--surface: #f8fafc",
+      "--text-primary: #0f172a",
+      "--text-muted: #64748b"
+    ],
+    "darkMode": "Add data-theme=\"dark\" to <html> element"
+  },
+  "compatibility": {
+    "description": "Conservative CSS reset that won't break existing styles (like Bootstrap)",
+    "features": [
+      "Only normalizes cross-browser differences",
+      "Doesn't aggressively reset margins/padding",
+      "Preserves existing form element styling",
+      "Uses class-based typography (opt-in)",
+      "Works alongside existing CSS"
+    ]
+  }
+}
+

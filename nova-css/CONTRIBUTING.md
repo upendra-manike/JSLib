@@ -1,6 +1,6 @@
-# Contributing to NovaCSS
+# Contributing to RudraCSS
 
-Thank you for your interest in contributing to NovaCSS! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to RudraCSS! This document provides guidelines and instructions for contributing.
 
 ## Code of Conduct
 
@@ -32,7 +32,7 @@ Feature suggestions are welcome! Please create an issue with:
 1. **Fork the repository**
    ```bash
    git clone https://github.com/upendra-manike/JSLib.git
-   cd JSLib/nova-css
+   cd JSLib/rudra-css
    ```
 
 2. **Create a branch**
@@ -84,7 +84,7 @@ Feature suggestions are welcome! Please create an issue with:
 ### Project Structure
 
 ```
-nova-css/
+rudra-css/
 ├── src/
 │   ├── base/          # Base styles (reset, variables, typography)
 │   ├── utilities/     # Utility classes

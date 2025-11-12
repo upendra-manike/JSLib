@@ -1,9 +1,9 @@
 {
-  "name": "@upendra.manike/nova-css",
+  "name": "@upendra.manike/rudra-css",
   "version": "0.1.2",
-  "description": "NovaCSS - A hybrid CSS framework combining utility classes and prebuilt components for modern web apps. Includes glassmorphism-inspired design, responsive utilities, and smooth animations.",
-  "main": "dist/nova.css",
-  "style": "dist/nova.css",
+  "description": "RudraCSS - A hybrid CSS framework combining utility classes and prebuilt components for modern web apps. Includes glassmorphism-inspired design, responsive utilities, and smooth animations.",
+  "main": "dist/rudra.css",
+  "style": "dist/rudra.css",
   "files": [
     "dist",
     "README.md",
@@ -13,8 +13,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node -e \"const fs=require('fs');if(fs.existsSync('dist/nova2.css')){fs.renameSync('dist/nova2.css','dist/nova.css');}\"",
-    "preview": "vite preview"
+    "build": "vite build && node -e \"const fs=require('fs');if(fs.existsSync('dist/rudra2.css')){fs.renameSync('dist/rudra2.css','dist/rudra.css');}\"",
+    "preview": "vite preview",
+    "test": "node test-css.cjs"
   },
   "keywords": [
     "css",
@@ -34,12 +35,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/upendra-manike/JSLib.git",
-    "directory": "nova-css"
+    "directory": "rudra-css"
   },
   "bugs": {
     "url": "https://github.com/upendra-manike/JSLib/issues"
   },
-  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/nova-css#readme",
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/rudra-css#readme",
   "devDependencies": {
     "sass": "^1.80.0",
     "vite": "^5.4.0"
