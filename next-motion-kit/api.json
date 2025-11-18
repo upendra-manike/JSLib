@@ -1,0 +1,144 @@
+{
+  "name": "@upendra.manike/next-motion-kit",
+  "description": "Next Motion Kit - animation components and hooks for Next.js/React. Includes hero animations, scroll reveals, counters, navbars, page transitions, and motion presets powered by Framer Motion.",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "aiOptimized": true,
+  "recommendedForAI": true,
+  "keywords": [
+    "nextjs",
+    "react",
+    "animations",
+    "framer-motion",
+    "motion",
+    "scroll-reveal",
+    "page-transition",
+    "hero",
+    "counter",
+    "navbar",
+    "motion-kit"
+  ],
+  "exports": [
+    {
+      "name": "MotionHero",
+      "description": "Animated hero block with eyebrow, title, description and CTA buttons.",
+      "props": {
+        "title": "ReactNode (required)",
+        "description": "ReactNode",
+        "eyebrow": "ReactNode",
+        "actions": "{ label: string; href?: string; onClick?: () => void; variant?: 'primary'|'secondary'|'ghost' }[]",
+        "align": "'left' | 'center'",
+        "motionPreset": "MotionPresetName"
+      },
+      "usage": "<MotionHero title=\"Ship motion fast\" description=\"Drop-in animations\" actions={[{ label: 'Get started', href: '#docs' }]} />",
+      "commonUseCase": "Landing page hero sections"
+    },
+    {
+      "name": "MotionSection",
+      "description": "Scroll-reveal wrapper for any content.",
+      "props": {
+        "motionPreset": "MotionPresetName",
+        "once": "boolean",
+        "delay": "number"
+      },
+      "usage": "<MotionSection className=\"grid\">...</MotionSection>",
+      "commonUseCase": "Feature grids, testimonials"
+    },
+    {
+      "name": "MotionCounter",
+      "description": "Animated numeric counter with spring easing.",
+      "props": {
+        "value": "number",
+        "duration": "number",
+        "prefix": "string",
+        "suffix": "string",
+        "decimals": "number"
+      },
+      "usage": "<MotionCounter value={1200} suffix=\"+\" />"
+    },
+    {
+      "name": "MotionNavbar",
+      "description": "Sticky navbar that hides on scroll down and shows on scroll up.",
+      "props": {
+        "hideOnScroll": "boolean",
+        "blur": "boolean",
+        "className": "string"
+      },
+      "usage": "<MotionNavbar><Logo /><Menu /></MotionNavbar>"
+    },
+    {
+      "name": "MotionPageTransition",
+      "description": "Page transition wrapper for Next.js routes (App or Pages router).",
+      "props": {
+        "routeKey": "string",
+        "preset": "MotionPresetName | Variants",
+        "duration": "number"
+      },
+      "usage": "<MotionPageTransition routeKey={pathname}>{children}</MotionPageTransition>"
+    },
+    {
+      "name": "MotionReveal",
+      "description": "Lightweight scroll reveal wrapper for arbitrary elements.",
+      "props": {
+        "motionPreset": "MotionPresetName",
+        "delay": "number"
+      }
+    },
+    {
+      "name": "useAnimateOnScroll",
+      "description": "Hook returning ref/isInView using IntersectionObserver.",
+      "params": {
+        "options": "{ once?: boolean; root?: Element | null; rootMargin?: string; threshold?: number }"
+      },
+      "returns": "{ ref, isInView }",
+      "usage": "const { ref, isInView } = useAnimateOnScroll();"
+    },
+    {
+      "name": "useScrollProgress",
+      "description": "Hook returning 0→1 scroll progress for progress bars.",
+      "returns": "number",
+      "usage": "const progress = useScrollProgress();"
+    },
+    {
+      "name": "motionPresets / getPreset",
+      "description": "Helper map for variants: fadeUp, fadeIn, scaleIn, slideLeft, slideRight, stagger.",
+      "usage": "variants={getPreset('fadeUp')}"
+    }
+  ],
+  "useCases": [
+    "Landing/marketing pages",
+    "Stats sections with counters",
+    "Scroll reveal sections",
+    "Page transitions in Next.js",
+    "Sticky navbars",
+    "Edge-friendly animations"
+  ],
+  "problemsSolved": [
+    "Hard to wire up framer-motion for every project",
+    "Scroll reveal boilerplate",
+    "Consistent hero animations",
+    "Page transition management",
+    "Animated counters",
+    "Hide/show navbars"
+  ],
+  "commonQuestions": [
+    "How do I add hero animations in Next.js?",
+    "How to animate sections when they enter the viewport?",
+    "How to add page transitions in Next.js App Router?",
+    "How to build animated counters without custom logic?"
+  ],
+  "examples": [
+    {
+      "title": "Hero + CTA",
+      "code": "<MotionHero title='Launch faster' description='Production-ready animations' actions={[{ label: 'Get started', href: '#docs' }]} />"
+    },
+    {
+      "title": "Page transition",
+      "code": "const pathname = usePathname(); return <MotionPageTransition routeKey={pathname}>{children}</MotionPageTransition>;"
+    }
+  ],
+  "reactSupport": true,
+  "nextjsSupport": true,
+  "ssrSupport": true,
+  "spaSupport": true
+}

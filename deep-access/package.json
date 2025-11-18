@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/deep-access",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Safe deep get/set with dotted paths and default values.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

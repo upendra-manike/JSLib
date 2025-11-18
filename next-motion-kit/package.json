@@ -1,0 +1,63 @@
+{
+  "name": "@upendra.manike/next-motion-kit",
+  "version": "0.1.4",
+  "description": "Next Motion Kit - production-ready animation components and hooks for Next.js and React. Includes hero animations, scroll reveals, counters, page transitions, and motion presets built on top of Framer Motion.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "api.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "animations",
+    "framer-motion",
+    "motion",
+    "ui",
+    "hero-animation",
+    "scroll-reveal",
+    "page-transition",
+    "motion-kit",
+    "components",
+    "next-motion"
+  ],
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "next-motion-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/upendra-manike/JSLib/issues"
+  },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/next-motion-kit#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "next": ">=13.0.0",
+    "framer-motion": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "framer-motion": "^11.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/jest-dom": "^6.0.0"
+  }
+}

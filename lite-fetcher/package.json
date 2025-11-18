@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/lite-fetcher",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Modern, tiny utility library for API calls + caching with fetch + localStorage built-in",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

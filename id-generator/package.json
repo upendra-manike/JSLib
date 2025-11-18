@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/id-generator",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Secure ID generation for JavaScript/TypeScript - UUID v4, GUID, short unique strings, hash functions, and string masking utilities. Perfect for generating secure identifiers, tokens, and unique keys.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

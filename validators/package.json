@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/validators",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Validation utilities for JavaScript/TypeScript - email, URL, phone, empty checks, type checks, and runtime detection. Comprehensive validation library for forms, APIs, and data validation. Lightweight and fast.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/seo-boost",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "SEO optimization package for JavaScript/React/Next.js/Vue apps. Automatic meta tags, JSON-LD schema, OpenGraph, Twitter cards, sitemap generation, and SEO analysis. Perfect for AI code generation.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

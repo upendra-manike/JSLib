@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/rudra-css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "RudraCSS - A hybrid CSS framework combining utility classes and prebuilt components for modern web apps. Includes glassmorphism-inspired design, responsive utilities, and smooth animations.",
   "main": "dist/rudra.css",
   "style": "dist/rudra.css",

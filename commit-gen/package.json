@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/commit-gen",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Natural Language to Conventional Commit - CLI tool to generate conventional commit messages automatically. Convert plain English to semantic commit format. Perfect for Git workflows and CI/CD pipelines.",
   "main": "./dist/index.js",
   "bin": {

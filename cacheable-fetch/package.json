@@ -1,6 +1,6 @@
 {
   "name": "@upendra.manike/cacheable-fetch",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Offline-first API Layer for JavaScript/TypeScript - Wrap fetch with automatic localStorage/IndexedDB caching, TTL, and background refresh. Perfect for PWAs, mobile web apps, and offline-first applications. Reduce server load and improve user experience.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
