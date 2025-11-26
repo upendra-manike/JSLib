@@ -1,0 +1,40 @@
+{
+  "name": "@upendra.manike/rn-a11y-inspector",
+  "version": "0.1.1",
+  "description": "Accessibility audit runners and screen reader tooling.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.4.0",
+    "rimraf": "^5.0.5"
+  },
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "rn-a11y-inspector"
+  },
+  "bugs": {
+    "url": "https://github.com/upendra-manike/JSLib/issues"
+  },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/rn-a11y-inspector#readme",
+  "keywords": [
+    "react-native",
+    "jslib",
+    "rn a11y inspector"
+  ]
+}
