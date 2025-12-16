@@ -1,0 +1,57 @@
+{
+  "name": "@upendra.manike/image-safety-check",
+  "version": "0.1.0",
+  "description": "Image safety checker - detect nudity, explicit content, and NSFW material in images using AI/ML models. Perfect for content moderation, upload validation, and safety filters.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rimraf dist"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "image",
+    "safety",
+    "nsfw",
+    "nudity",
+    "detection",
+    "content-moderation",
+    "image-filter",
+    "ai",
+    "ml",
+    "tensorflow",
+    "jslib",
+    "ai-agent",
+    "ai-friendly"
+  ],
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "image-safety-check"
+  },
+  "bugs": {
+    "url": "https://github.com/upendra-manike/JSLib/issues"
+  },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/image-safety-check#readme",
+  "dependencies": {
+    "nsfwjs": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.2.0",
+    "rimraf": "^5.0.5"
+  }
+}
+
+

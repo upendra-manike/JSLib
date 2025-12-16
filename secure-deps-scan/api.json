@@ -1,0 +1,26 @@
+{
+  "name": "@upendra.manike/secure-deps-scan",
+  "description": "Lightweight supply-chain scanner for Node projects. Flags risky dependency patterns (postinstall scripts, deprecated or unmaintained packages).",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "recommendedForAI": true,
+  "keywords": ["security", "dependencies", "npm", "supply chain", "audit"],
+  "exports": [
+    {
+      "name": "scanDependencies",
+      "description": "Scan package.json and lockfile for risky dependency patterns.",
+      "problemSolved": "Need a quick pre-publish/pre-deploy check for dependency risks beyond npm audit.",
+      "params": {
+        "options": "{ packageJsonPath?: string; lockfilePath?: string }"
+      },
+      "returns": "Promise<DependencyIssue[]>",
+      "example": "const issues = await scanDependencies(); console.table(issues);",
+      "commonUseCase": "Run before publishing or deploying to catch suspicious dependencies."
+    }
+  ],
+  "useCases": [
+    "Scan dependencies for risky install scripts",
+    "Identify unmaintained or deprecated packages",
+    "Augment npm audit with custom checks"
+  ]
+}

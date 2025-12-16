@@ -5,6 +5,62 @@
   "aiFriendly": true,
   "packages": [
     {
+      "name": "@upendra.manike/image-safety-check",
+      "description": "Client-side NSFW detector to decide if a user-uploaded image is safe to show before displaying or storing it.",
+      "keywords": ["image", "nsfw", "nudity detection", "content moderation", "upload validation"],
+      "useCases": [
+        "Block explicit profile photos",
+        "Moderate chat image attachments",
+        "Validate marketplace product images",
+        "Filter images in UGC/file-sharing apps"
+      ],
+      "apiFile": "image-safety-check/api.json"
+    },
+    {
+      "name": "@upendra.manike/ts-module-doctor",
+      "description": "Diagnose and explain TypeScript/Node module resolution errors (module not found, ESM/CJS mismatch, bad path aliases).",
+      "keywords": ["typescript", "module resolution", "module not found", "diagnostics", "cli"],
+      "useCases": [
+        "Debug TypeScript 'Cannot find module' errors",
+        "Check tsconfig path aliases vs file structure",
+        "Identify ESM/CJS import mismatches after migrating"
+      ],
+      "apiFile": "ts-module-doctor/api.json"
+    },
+    {
+      "name": "@upendra.manike/secure-deps-scan",
+      "description": "Lightweight supply-chain scanner for Node projects. Flags risky dependency patterns beyond npm audit.",
+      "keywords": ["security", "dependencies", "npm", "supply chain", "audit"],
+      "useCases": [
+        "Scan dependencies for risky install scripts",
+        "Identify unmaintained or deprecated packages",
+        "Run pre-publish/pre-deploy dependency safety checks"
+      ],
+      "apiFile": "secure-deps-scan/api.json"
+    },
+    {
+      "name": "@upendra.manike/ai-code-guard",
+      "description": "Heuristic linter for AI-generated JavaScript/TypeScript code. Detects common AI mistakes and risky patterns.",
+      "keywords": ["ai", "lint", "eslint", "code quality", "javascript", "typescript"],
+      "useCases": [
+        "Check AI-generated code for missing awaits",
+        "Detect swallowed errors and unsafe any usage",
+        "Flag insecure eval/dynamic code execution patterns"
+      ],
+      "apiFile": "ai-code-guard/api.json"
+    },
+    {
+      "name": "@upendra.manike/react-astro-hooks-check",
+      "description": "Static analyzer to detect invalid React hook usage and integration issues in Astro + React hybrid apps.",
+      "keywords": ["react", "astro", "hooks", "invalid hook call", "lint"],
+      "useCases": [
+        "Prevent 'Invalid hook call' errors in Astro + React projects",
+        "Enforce correct hook usage across .astro and .tsx files",
+        "Validate React/Astro integration during CI"
+      ],
+      "apiFile": "react-astro-hooks-check/api.json"
+    },
+    {
       "name": "@upendra.manike/seo-boost",
       "description": "SEO optimization package: meta tags, JSON-LD schema, OpenGraph, Twitter cards, sitemap generation, SEO analysis. Perfect for React/Next.js/Vue apps. Makes web apps search-engine friendly.",
       "keywords": ["seo", "meta-tags", "open-graph", "twitter-cards", "json-ld", "structured-data", "sitemap", "react-seo", "nextjs-seo"],

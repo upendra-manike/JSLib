@@ -1,0 +1,27 @@
+{
+  "name": "@upendra.manike/react-astro-hooks-check",
+  "description": "Static analyzer to detect invalid React hook usage and React/Astro integration problems in hybrid apps.",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "recommendedForAI": true,
+  "keywords": ["react", "astro", "hooks", "invalid hook call", "lint"],
+  "exports": [
+    {
+      "name": "analyzeHooks",
+      "description": "Analyze .astro/.tsx files for invalid React hook usage and integration issues.",
+      "problemSolved": "Fix 'Invalid hook call' and other hook misuse when combining React with Astro.",
+      "params": {
+        "entryGlobs": "string | string[] (files to analyze)",
+        "options": "{ rootDir?: string; reactVersion?: string }"
+      },
+      "returns": "Promise<HookIssue[]>",
+      "example": "const issues = await analyzeHooks(['src/**/*.astro', 'src/**/*.tsx']); console.table(issues);",
+      "commonUseCase": "Run in CI or locally to catch bad hook patterns in Astro + React projects."
+    }
+  ],
+  "useCases": [
+    "Detect invalid React hook usage in Astro components",
+    "Check hybrid React/Astro projects for hook problems",
+    "Prevent 'Invalid hook call' runtime errors"
+  ]
+}

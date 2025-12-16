@@ -1,0 +1,60 @@
+{
+  "name": "@upendra.manike/image-safety-check",
+  "description": "Client-side NSFW detector to decide if a user-uploaded image is safe to show. Detects nudity/explicit content using an AI model.",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "recommendedForAI": true,
+  "keywords": [
+    "image",
+    "nsfw",
+    "nudity detection",
+    "content moderation",
+    "upload validation",
+    "safety",
+    "ai-agent"
+  ],
+  "exports": [
+    {
+      "name": "isImageSafe",
+      "description": "Quick boolean check if an image is safe to display (no nudity/explicit content).",
+      "problemSolved": "Decide whether to show or block a user-uploaded image in feeds or chats.",
+      "params": {
+        "image": "HTMLImageElement | HTMLCanvasElement | ImageData | string (URL)",
+        "threshold": "number (optional, default 0.5)"
+      },
+      "returns": "Promise<boolean>",
+      "example": "const safe = await isImageSafe(imageElement, 0.5); if (!safe) { /* block or blur */ }",
+      "commonUseCase": "Filter images before saving them or displaying them to other users."
+    },
+    {
+      "name": "containsNudity",
+      "description": "Boolean check if an image contains nudity.",
+      "problemSolved": "Quickly detect nudity in uploaded images.",
+      "params": {
+        "image": "HTMLImageElement | HTMLCanvasElement | ImageData | string (URL)",
+        "threshold": "number (optional, default 0.5)"
+      },
+      "returns": "Promise<boolean>",
+      "example": "const hasNudity = await containsNudity(imageElement);",
+      "commonUseCase": "Reject or flag images that contain nudity."
+    },
+    {
+      "name": "checkImage",
+      "description": "Run a full safety check and get detailed category probabilities.",
+      "problemSolved": "Need detailed NSFW scores per category (porn, sexy, neutral, etc.).",
+      "params": {
+        "image": "HTMLImageElement | HTMLCanvasElement | ImageData | string (URL)",
+        "options": "{ threshold?: number; modelPath?: string }"
+      },
+      "returns": "Promise<SafetyCheckResult>",
+      "example": "const result = await checkImage(imageElement); console.log(result.categories.porn);",
+      "commonUseCase": "Build custom moderation thresholds or dashboards."
+    }
+  ],
+  "useCases": [
+    "Block explicit profile photos",
+    "Moderate chat image attachments",
+    "Validate marketplace product images",
+    "Filter images in UGC/file-sharing apps"
+  ]
+}

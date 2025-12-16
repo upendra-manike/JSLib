@@ -1,0 +1,27 @@
+{
+  "name": "@upendra.manike/ai-code-guard",
+  "description": "Heuristic linter for AI-generated JavaScript/TypeScript code. Detects common AI mistakes: missing await, swallowed errors, unsafe any, insecure eval, etc.",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "recommendedForAI": true,
+  "keywords": ["ai", "lint", "eslint", "code quality", "javascript", "typescript"],
+  "exports": [
+    {
+      "name": "analyzeCode",
+      "description": "Analyze JS/TS files for common AI-generated code issues.",
+      "problemSolved": "You pasted AI-generated code and want to catch likely bugs or vulnerabilities before using it.",
+      "params": {
+        "entryGlobs": "string | string[] (files to analyze)",
+        "options": "{ rootDir?: string; configFile?: string }"
+      },
+      "returns": "Promise<CodeIssue[]>",
+      "example": "const issues = await analyzeCode(['src/**/*.ts']); console.table(issues);",
+      "commonUseCase": "Quick quality/safety check on AI-suggested code snippets."
+    }
+  ],
+  "useCases": [
+    "Check AI-generated code for missing awaits",
+    "Detect swallowed errors and unsafe any types",
+    "Flag insecure eval/dynamic code patterns"
+  ]
+}

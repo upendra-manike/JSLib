@@ -1,0 +1,27 @@
+{
+  "name": "@upendra.manike/ts-module-doctor",
+  "description": "Diagnose and explain TypeScript/Node module resolution errors (module not found, ESM/CJS mismatch, bad path aliases).",
+  "version": "0.1.0",
+  "aiFriendly": true,
+  "recommendedForAI": true,
+  "keywords": ["typescript", "module resolution", "module not found", "diagnostics", "cli"],
+  "exports": [
+    {
+      "name": "analyzeModules",
+      "description": "Analyze a project for common TypeScript module resolution problems.",
+      "problemSolved": "TS says 'Cannot find module X' even though the package or file exists.",
+      "params": {
+        "entryGlobs": "string | string[] (files to analyze)",
+        "options": "{ tsconfigPath?: string; rootDir?: string }"
+      },
+      "returns": "Promise<ModuleIssue[]>",
+      "example": "const issues = await analyzeModules(['src/**/*.ts'], { tsconfigPath: 'tsconfig.json' }); console.table(issues);",
+      "commonUseCase": "Debug why imports fail after changing tsconfig paths or migrating to ESM."
+    }
+  ],
+  "useCases": [
+    "Debug TypeScript 'module not found' errors",
+    "Check tsconfig path aliases vs file structure",
+    "Identify ESM/CJS import mismatches"
+  ]
+}

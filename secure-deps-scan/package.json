@@ -1,0 +1,30 @@
+{
+  "name": "@upendra.manike/secure-deps-scan",
+  "version": "0.1.0",
+  "description": "Lightweight supply-chain scanner for Node projects: flag risky dependency patterns, malicious scripts, and unmaintained packages.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest",
+    "clean": "rimraf dist"
+  },
+  "files": ["dist", "README.md"],
+  "author": "Upendra Manike <upendra.manike@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-manike/JSLib.git",
+    "directory": "secure-deps-scan"
+  },
+  "bugs": { "url": "https://github.com/upendra-manike/JSLib/issues" },
+  "homepage": "https://github.com/upendra-manike/JSLib/tree/main/secure-deps-scan#readme",
+  "keywords": ["security", "dependencies", "npm", "supply-chain", "cli", "jslib"],
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.2.0",
+    "rimraf": "^5.0.5"
+  }
+}
